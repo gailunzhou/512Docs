@@ -31,13 +31,13 @@ theme:
     #- 硬件:
 
 markdown_extensions: #扩展项
+  - pymdownx.tabbed:  # 启用内容标签页扩展
+      alternate_style: true  # 可选：启用交替样式（视觉更美观）
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
   - pymdownx.highlight:  # 启用代码高亮核心扩展
       anchor_linenums: true  # 可选：为代码行添加锚点（便于跳转）
   - pymdownx.superfences:  # 支持嵌套代码块、自定义格式等高级功能
-  - pymdownx.tabbed:  # 新增：启用内容标签页扩展
-      alternate_style: true  # 可选：启用交替样式（视觉更美观）
 
 copyright: CopyRight @ 2025-11-6 TJCU CCChiJi All Rights Reserved
