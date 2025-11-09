@@ -44,4 +44,4 @@ markdown_extensions: #扩展项
       anchor_linenums: true  # 可选：为代码行添加锚点（便于跳转）
   - pymdownx.superfences:  # 支持嵌套代码块、自定义格式等高级功能
 
-copyright: CopyRight @ 2025-11-6 TJCU CCChiJi All Rights Reserved
+copyright: CopyRight @ 2025-11-6 TJCU CCChiJi  All Rights Reserved
