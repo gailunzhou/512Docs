@@ -1,12 +1,19 @@
-# 核心：Markdown 语法（Material 主题增强版）
+<div class="article-meta" style="background: #f0f8ff; padding: 15px; border-left: 4px solid #2196f3; margin-bottom: 20px; border-radius: 4px;">
+<p style="margin: 0; color: #666; font-size: 0.9em;">
+<strong>📅 发布日期:</strong> 2025-11-08 &nbsp;|&nbsp;
+<strong>👤 作者:</strong> CCChiJi &nbsp;|&nbsp;
+<strong>📁 分类:</strong> 技术笔记 &nbsp;|&nbsp;
+<strong>🏷️ 标签:</strong> Markdown语法
+</p>
+</div>
 
-# Written by : CCChiJi
+# 核心：Markdown 语法（Material 主题增强版）
 
 Material 主题对标准 Markdown 进行了扩展，支持表格、代码块、公式、注释等丰富功能，以下是常用语法及效果示例，推荐使用VScode编译，后文所有内容默认以VScode环境
 
 **文中提到的根目录都指文件夹下含有docs文件夹和mkdocs.yml文件的那个文件夹**
 
-## 基础文本格式 
+## 一、基础文本格式 
 
 *(部分效果由于格式问题无法体现，以语法为主)*
 
@@ -32,11 +39,11 @@ Material 主题对标准 Markdown 进行了扩展，支持表格、代码块、�
 ![示例图片](https://picsum.photos/400/200)
 ```
 
-## 关于换行
+## 二、关于换行
 
 Markdown 换行核心规则：默认连续回车不换行，需用特定语法触发，不同场景用法不同
 
-### 普通换行（同一段落内换行
+### 1.普通换行（同一段落内换行
 ）
 在需要换行的位置，添加 2 个及以上空格 后按回车，渲染后会显示为换行（软换行）
 
@@ -46,7 +53,7 @@ Markdown 换行核心规则：默认连续回车不换行，需用特定语法�
 第一行末尾加两个空格  
 第二行就会换行显示
 ```
-### 强制换行（分段式换行）
+### 2.强制换行（分段式换行）
 
 直接空一行（按两次回车），会生成新段落，两段之间会有间距（硬换行）
 
@@ -56,20 +63,22 @@ Markdown 换行核心规则：默认连续回车不换行，需用特定语法�
 第一行内容（按两次回车）
 第二行内容
 ```
-### 标签强制换行
+### 3.标签强制换行
 
 用 HTML 标签 `<br>` 实现换行，无需空格，直接插入标签即可
 
 **示例:**
 
 ```
-第一行内容<br>
-第一行内容<br>
-第一行内容
+第一行内容<br>第一行内容<br>第一行内容
 ```
 
-## 列表（有序/无序/任务）
-### 无序列表：
+**效果:**
+
+第一行内容<br>第一行内容<br>第一行内容
+
+## 三、列表（有序/无序/任务）
+### 1.无序列表：
 
 用`-`、`*`或`+`开头，支持嵌套
 
@@ -92,7 +101,7 @@ Markdown 换行核心规则：默认连续回车不换行，需用特定语法�
     * 番茄
     + 黄瓜
 
-### 有序列表
+### 2.有序列表
 
 用数字+`.`开头，自动编号（意思是，即使数字不连贯，也会顺序排列）<br>
 子项前加一个制表符(*Tab*)
@@ -114,7 +123,7 @@ Markdown 换行核心规则：默认连续回车不换行，需用特定语法�
     1. 打开mkdocs.yml
     2. 设置theme: material
 
-### 任务列表
+### 3.任务列表
 
 用`-[]`（表示未完成）和`-[X]`（表示已完成）表示：<br>
 *`-`号和`[]`以及后面的文字描述需要各一个空格，同时`[]`内的`x`不用区分大小写，如果要表示未完成，需要加一个空格：`[_]`*
@@ -132,11 +141,11 @@ Markdown 换行核心规则：默认连续回车不换行，需用特定语法�
 - [x] 配置 Material 主题
 - [ ] 部署到 GitHub
 
-## 代码块（Material 语法高亮）
+## 四、代码块（Material 语法高亮）
 
 Material 支持 100+ 编程语言的语法高亮，用 ``` 包裹代码，指定语言名称即可
 
-### 单行代码
+### 1.单行代码
 
 用`包裹
 
@@ -150,7 +159,7 @@ Material 支持 100+ 编程语言的语法高亮，用 ``` 包裹代码，指定
 
 `mkdocs serve`命令用于启动本地预览
 
-### 多行代码块
+### 2.多行代码块
 
 **语法:**
 在代码块开头的上一行、代码块结束的下一行也加上```即可
@@ -164,7 +173,7 @@ result = add(10 ,20)
 print(f"结果：{result}")#输出30
 ```
 
-## 表格（支持对齐与样式）
+## 五、表格（支持对齐与样式）
 
 用`|`分割列，`:`*（英语）*控制对齐（左对齐`:---`、居中`:---:`、右对齐`---:`*(中间的-符号并不代表必须为三个)*）
 
@@ -186,8 +195,8 @@ print(f"结果：{result}")#输出30
 | `**文本**`     | 加粗强调             | **重要内容**         |
 | `[链接](url)`  | 插入外部/内部链接    | [MkDocs](https://mkdocs.org) |
 
-## 引用与注释
-### 引用
+## 六、引用与注释
+### 1.引用
 
 用`>`开头，后加一个空格，支持嵌套
 
@@ -203,7 +212,7 @@ print(f"结果：{result}")#输出30
 > 这是一级引用: MkDocs是一个快速、简单、华丽的静态网站生成器。
 > > 这是二级引用：Material 主题让文档更美观。
 
-### 注释（仅编辑时可见，渲染后隐藏）
+### 2.注释（仅编辑时可见，渲染后隐藏）
 
 用`[//]:#(注释内容)`表示 *（符号部分为英文输入）*，适合记录编辑思路
 
@@ -219,8 +228,8 @@ print(f"结果：{result}")#输出30
 这是公开内容。
 [//]: # (这是注释，网站渲染后不会显示)
 
-## Material 主题独有的扩展语法
-### 内容标签页
+## 七、Material 主题独有的扩展语法
+### 1.内容标签页
 
 用`===`后加一个空格，分隔标签页，适合分类展示内容，支持嵌套
 子项前加一个制表符(*Tab*)
@@ -231,19 +240,19 @@ print(f"结果：{result}")#输出30
 
 - 开启VScode中的终端
 
-![VScodeTerminal](images/VScodeTerminal.png)
+![VScodeTerminal](images/2025-11-8-markdown-syntax/VScodeTerminal.png)
 
 - 复制MkDocs文件路径，即文件夹下含有docs文件夹和mkdocs.yml文件的那个文件夹
 
-![DocsPath](images/DocsPath.png)
+![DocsPath](images/2025-11-8-markdown-syntax/DocsPath.png)
 
 - 使用cd跳转到对应文件夹
 
-![cd2path](images/cd2path.png)
+![cd2path](images/2025-11-8-markdown-syntax/cd2path.png)
 
 - 下载扩展包
 
-![installex](images/installex.png)
+![installex](images/2025-11-8-markdown-syntax/installex.png)
 
 ```bash
 pip install pymdown-extensions
@@ -251,7 +260,7 @@ pip install pymdown-extensions
 
 - 修改mkdocs.yml中的配置 ***（修改完记得保存）***
 
-![ymlchange](images/ymlchange.png)
+![ymlchange](images/2025-11-8-markdown-syntax/ymlchange.png)
 
 **语法:**
 代码块部分还是要按语法加上```表示
@@ -287,7 +296,7 @@ int main()
 }
 ```
 
-## 提示框（警告 / 信息 / 成功）
+## 八、提示框（警告 / 信息 / 成功）
 
 用`!!! 类型`开头，`!!!`后需要加一个空格，其中*类型*支持`note`(信息)、`warning`(警告)、`success`(成功)等
 
@@ -297,7 +306,7 @@ int main()
 
 修改mkdocs.yml中的配置即可 ***（修改完记得保存）***
 
-![admonition](images/admonition.png)
+![admonition](images/2025-11-8-markdown-syntax/admonition.png)
 
 **语法:**
 
@@ -323,36 +332,38 @@ int main()
 !!! success "成功提示"
     文档更新后，执行 `mkdocs gh-deploy` 即可部署到 GitHub。
 
-## 项目优化：添加图片、附件与导航
-### 添加本地图片
+## 九、项目优化：添加图片、附件与导航
+### 1.添加本地图片
 
 **方法:**
 
 1. 在`docs`目录下创建`images`文件夹，放入图片(如CCChiJi.png)
 2. 在Markdown中引用:
+
 ```
-![CCChiJi](images/CCChiJi.jpg)
+![CCChiJi](images/2025-11-8-markdown-syntax/CCChiJi.jpg)
 ```
 
 **效果:**
 
-![CCChiJi](images/CCChiJi.jpg)
+![CCChiJi](images/2025-11-8-markdown-syntax/CCChiJi.jpg)
 
-### 添加附件(如PDF)
+### 2.添加附件(如PDF)
 
 **方法:**
 
 1. 在`docs`目录下创建`files`文件夹，放入附件(如guide.pdf)
 2. 用链接引用，支持下载
+
 ```
-[下载PDF指南](files/guide.pdf) #点击链接可下载或预览
+[下载PDF指南](files/2025-11-8-markdown-syntax/guide.pdf) #点击链接可下载或预览
 ```
 
 **效果:**
 
-[下载PDF指南](files/guide.pdf)
+[下载PDF指南](files/2025-11-8-markdown-syntax/guide.pdf)
 
-## 优化导航结构
+### 3.优化导航结构
 
 修改`mkdocs.yml`的`nav`配置，支持多级导航和外部链接
 

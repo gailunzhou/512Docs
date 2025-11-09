@@ -8,7 +8,6 @@ theme:
   language: zh #界面语言
 
   features: #启用material特色功能
-    - navigation.sections
     - navigation.instant
     - navigation.top #返回顶部按钮
     - navigation.tabs #顶部导航标签页
@@ -28,12 +27,20 @@ theme:
       accent: cyan #强调色 青色
 
 nav: #网站导航结构（侧边栏和顶部标签页的内容）
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+#成员仅限修改改部分用于增加或修改文档
+
   - 首页: index.md # 导航项名称 -> 对应docs目录下的Markdown文件
   - 基础指南:
-    - 创建和更新网站: createweb.md
-    - Markdown 语法: markdown-syntax.md
+    - 创建和更新网站: 2025-11-8-createweb.md
+    - Markdown 语法: 2025-11-8-markdown-syntax.md
+    - 文档格式规范: 2025-11-9-Format_specification.md
+    - 多人协作: 2025-11-9-multi-cooperation.md
+
 
 markdown_extensions: #扩展项
+  - meta  # 启用 Front Matter 解析
   - admonition  # 新增：启用提示框扩展
   - pymdownx.tabbed:  # 启用内容标签页扩展
       alternate_style: true  # 可选：启用交替样式（视觉更美观）
@@ -44,4 +51,4 @@ markdown_extensions: #扩展项
       anchor_linenums: true  # 可选：为代码行添加锚点（便于跳转）
   - pymdownx.superfences:  # 支持嵌套代码块、自定义格式等高级功能
 
-copyright: CopyRight @ 2025-11-6 TJCU CCChiJi All Rights Reserved
+copyright: "Copyright &copy; 2025 TJCU CCChiJi. All rights reserved."
