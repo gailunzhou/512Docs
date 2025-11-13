@@ -43,6 +43,11 @@ nav: #网站导航结构（侧边栏和顶部标签页的内容）
     - YOLO: 2025-11-9-YOLO11 模型训练与使用.md
     - LLM&API: 2025-11-12-Introduction to LLM APIs.md
 
+    # 
+    # 这个Layer用来测试二次开发的页面效果
+  - 插件测试:
+    - Lab512 Plugins: test/test_lab512.md
+
 
 markdown_extensions: #扩展项
   - meta  # 启用 Front Matter 解析
