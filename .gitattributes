@@ -1,0 +1,2 @@
+docs/secret/test.md filter=git-crypt diff=git-crypt
+*.labsecret filter=git-crypt diff=git-crypt
