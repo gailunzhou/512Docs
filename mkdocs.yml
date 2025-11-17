@@ -33,10 +33,10 @@ nav: #网站导航结构（侧边栏和顶部标签页的内容）
 
   - 首页: index.md # 导航项名称 -> 对应docs目录下的Markdown文件
   - 基础指南:
-    - 创建和更新网站: 2025-11-8-createweb.md
-    - Markdown 语法: 2025-11-8-markdown-syntax.md
-    - 文档格式规范: 2025-11-9-Format_specification.md
-    - 多人协作: 2025-11-9-multi-cooperation.md
+    - 创建和更新网站: basic/2025-11-8-createweb.md
+    - Markdown 语法: basic/2025-11-8-markdown-syntax.md
+    - 文档格式规范: basic/2025-11-9-Format_specification.md
+    - 多人协作: basic/2025-11-9-multi-cooperation.md
 
   - 软件:
     - Unity引擎: 2025-11-9-Unity引擎.md
