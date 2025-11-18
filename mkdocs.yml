@@ -1,59 +1,95 @@
 site_name: Lab512 Docs
-theme:
-  name: material #指定的主题
+repo_name: 'Github/512Docs'
+repo_url: https://github.com/gailunzhou/512Docs
 
+# 插件配置项
+plugins:
+ - lab512
+ - glightbox
+
+# 主题配置项
+theme:
+  name: material
   icon:
     logo: material/cat
-  
-  language: zh #界面语言
-
-  features: #启用material特色功能
+  language: zh
+  features:
     - navigation.instant
-    - navigation.top #返回顶部按钮
-    - navigation.tabs #顶部导航标签页
-    - navigation.expand #让分组默认展开
-    - navigation.sections #侧边栏分组折叠
-    - search.suggest #搜索建议
-    - search.highlight #搜索结果高亮
-    - content.tabs.link #内容标签页支持锚点
-  palette: #配色方案（支持自动切换暗黑/亮色）
-    - media: "(prefers-color-scheme: light)" #亮色模式
+    - navigation.top # 返回顶部按钮
+    - navigation.tabs # 顶部导航标签页
+    - navigation.expand # 让分组默认展开
+    - navigation.sections # 侧边栏分组折叠
+    - search.suggest # 搜索建议
+    - search.highlight # 搜索结果高亮
+    - content.tabs.link # 内容标签页支持锚点
+    - content.code.copy
+    - content.code.select
+  palette: # 配色方案（支持自动切换暗黑/亮色）
+    - media: "(prefers-color-scheme: light)" # 亮色模式
       scheme: default
-      primary: blue #主色调
-      accent: orange #强调色 橙色
-    - media: "(prefers-color-scheme: dark)" #暗黑模式
+      primary: blue # 主色调
+      accent: orange # 强调色 橙色
+    - media: "(prefers-color-scheme: dark)" # 暗黑模式
       scheme: slate
-      primary: blue #主题色
-      accent: cyan #强调色 青色
+      primary: blue # 主题色
+      accent: cyan # 强调色 青色
 
-nav: #网站导航结构（侧边栏和顶部标签页的内容）
 
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
-#成员仅限修改该部分用于增加或修改文档
+# 扩展项
+# 详细使用说明请看 https://squidfunk.github.io/mkdocs-material/reference/
+markdown_extensions: 
+  - meta
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - def_list
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
 
-  - 首页: index.md # 导航项名称 -> 对应docs目录下的Markdown文件
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+  - pymdownx.superfences:
+
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# 网站导航结构（侧边栏和顶部标签页的内容）
+# 成员仅限修改该部分用于增加或修改文档
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# 导航项名称 -> 对应docs目录下的Markdown文件
+
+nav: 
+  - 首页: 
+    - 介绍: index.md # 主页
+    - 贡献者: contributor.md
+    - Changelog: changelog.md
+
   - 基础指南:
-    - 创建和更新网站: 2025-11-8-createweb.md
-    - Markdown 语法: 2025-11-8-markdown-syntax.md
-    - 文档格式规范: 2025-11-9-Format_specification.md
-    - 多人协作: 2025-11-9-multi-cooperation.md
+    - 环境配置: basic/2025-11-8-firstDeploy.md
+    - Markdown 语法: basic/2025-11-8-markdown-syntax.md
+    - 文档格式规范: basic/2025-11-9-Format_specification.md
+    - 多人协作: basic/2025-11-9-multi-cooperation.md
+    - 敏感文件处理: secret-note/secret-note.md
 
   - 软件:
     - Unity引擎: 2025-11-9-Unity引擎.md
     - YOLO: 2025-11-9-YOLO11 模型训练与使用.md
     - LLM&API: 2025-11-12-Introduction to LLM APIs.md
+  
+  - 网站测试:
+    - Lab512插件测试: dev-test/lab512_test.md
 
 
-markdown_extensions: #扩展项
-  - meta  # 启用 Front Matter 解析
-  - admonition  # 新增：启用提示框扩展
-  - pymdownx.tabbed:  # 启用内容标签页扩展
-      alternate_style: true  # 可选：启用交替样式（视觉更美观）
-  - pymdownx.tasklist:
-      custom_checkbox: true
-      clickable_checkbox: true
-  - pymdownx.highlight:  # 启用代码高亮核心扩展
-      anchor_linenums: true  # 可选：为代码行添加锚点（便于跳转）
-  - pymdownx.superfences:  # 支持嵌套代码块、自定义格式等高级功能
 
-copyright: "Copyright &copy; 2025 TJCU CCChiJi. All rights reserved."

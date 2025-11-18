@@ -1,5 +1,8 @@
 .vscode
 __pycache__
-.lab
 *.egg-info
+
+# Local env
+.lab
+.env
 *.labsecret

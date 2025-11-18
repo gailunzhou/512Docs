@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mkdocs-lab512-plugin"
+version = "0.1.0"
+description = "MkDocs plugin for Lab512"
+dependencies = [
+    "mkdocs>=1.4",
+    "PyYAML",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[project.entry-points."mkdocs.plugins"]
+lab512 = "tjcu_lab512.lab_plugin:Lab512Plugin"

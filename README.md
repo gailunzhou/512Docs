@@ -5,9 +5,11 @@ Lab512 Docs
 
 
 <div align="center">
-<img alt="Static Badge" src="https://img.shields.io/badge/MKDOCS-READY-blue?style=for-the-badge">
+<img alt="Static Badge" src="https://img.shields.io/badge/MKDOCS-Latest-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/Python-3.10-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="python version"/>
-<img alt="GitHub contributors" src="https://img.shields.io/github/contributors-anon/gailunzhou/512Docs?style=for-the-badge">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors-anon/gailunzhou/512Docs?style=for-the-badge&color=%238352de">
+
+  <img src="https://img.shields.io/github/deployments/gailunzhou/512Docs/github-pages?style=for-the-badge" alt="Deployment Status">
 
 </div>
 
@@ -23,8 +25,13 @@ Lab512 Docs
 2. 确保你已经掌握了 **Git** 和 **Markdown** 的基本使用方法。
 3. 确保你的网络能流畅的访问 GitHub 和相关服务。
 
+**注意: 禁止直接在 Github 上编写文档！！！ 请在本地使用编辑器（如 VSCode）编写和预览文档，然后通过 Git 提交和推送。否则 commits 记录会非常混乱😅**
+
 ## 敏感信息说明
 
-仓库会对实验室的敏感信息进行加密保护，Push 到远程仓库前会进行**自动加密**操作，拉取到本地后会自动解密。请确保你拥有**secret_key**才能查看相关内容（详细请看[敏感信息处理说明](https://gailunzhou.github.io/512Docs/secret/secret-note.md)），否则看到的是加密文本。
+实验室相关敏感信息，特别是涉及个人隐私的内容，请务必进行脱敏处理。
+如需加密内容或文件，请统一存放至 `docs/secret/` 目录。正确配置后，在 Push 到远程仓库前系统将执行自动加密，拉取至本地时则会自动解密。
 
->请联系学姐学长或老师获取该密钥并正确配置在你的本地环境中。
+注意： 只有拥有 **.labsecret** 密钥文件的用户才能查看加密文件内容（详见[敏感信息处理说明](https://gailunzhou.github.io/512Docs/secret/secret-note.md)），否则你只能看到加密后的 RAW 文件。
+
+> 如需获取该密钥文件，请联系学姐、学长或老师获取，并将其正确配置于本地环境中。
