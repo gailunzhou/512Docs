@@ -90,7 +90,7 @@ nav:
 
   - 软件: 
     - Introduction: software/index.md
-    - Unity引擎: 2025-11-9-Unity引擎.md
+    - Unity引擎: software/unity/2025-11-9-Unity引擎.md
   
   - 硬件:
     - Introduction: hardware/index.md
