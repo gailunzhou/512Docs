@@ -1,3 +1,6 @@
+---
+icon: material/navigation-variant
+---
 # Welcome to Lab512 Docs
 
 

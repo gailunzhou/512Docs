@@ -6,6 +6,7 @@ repo_url: https://github.com/gailunzhou/512Docs
 plugins:
  - lab512
  - glightbox
+ - search
 
 # 主题配置项
 theme:
@@ -17,13 +18,16 @@ theme:
     - navigation.instant
     - navigation.top # 返回顶部按钮
     - navigation.tabs # 顶部导航标签页
-    - navigation.expand # 让分组默认展开
-    - navigation.sections # 侧边栏分组折叠
     - search.suggest # 搜索建议
     - search.highlight # 搜索结果高亮
     - content.tabs.link # 内容标签页支持锚点
     - content.code.copy
     - content.code.select
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+    # - navigation.expand # 让分组默认展开
+  
   palette: # 配色方案（支持自动切换暗黑/亮色）
     - media: "(prefers-color-scheme: light)" # 亮色模式
       scheme: default
@@ -36,7 +40,7 @@ theme:
 
 
 # 扩展项
-# 详细使用说明请看 https://squidfunk.github.io/mkdocs-material/reference/
+# 详细说明请看 https://squidfunk.github.io/mkdocs-material/reference/
 markdown_extensions: 
   - meta
   - admonition
@@ -70,7 +74,8 @@ markdown_extensions:
 
 # 导航项名称 -> 对应docs目录下的Markdown文件
 
-nav: 
+nav:
+
   - 首页: 
     - 介绍: index.md # 主页
     - 贡献者: contributor.md
@@ -83,11 +88,25 @@ nav:
     - 多人协作: basic/2025-11-9-multi-cooperation.md
     - 敏感文件处理: secret-note/secret-note.md
 
-  - 软件:
+  - 软件: 
+    - Introduction: software/index.md
     - Unity引擎: 2025-11-9-Unity引擎.md
-    - YOLO: 2025-11-9-YOLO11 模型训练与使用.md
-    - LLM&API: 2025-11-12-Introduction to LLM APIs.md
   
+  - 硬件:
+    - Introduction: hardware/index.md
+
+  - AI应用:
+    - Introduction: ai/index.md
+    - 计算机视觉:
+      - YOLO: ai/2025-11-9-YOLO11 模型训练与使用.md
+      - CNN: ai/cnn.md # to do
+      - ResNet: ai/resnet.md # to do
+    - 大语言模型:
+      - LLM API: ai/llm/2025-11-12-Introduction to LLM APIs.md
+  
+  - 竞赛:
+    - Introduction: competition/index.md
+
   - 插件测试:
     - 主页: dev-test/index.md
     - Lab512插件测试: dev-test/lab512_test.md

@@ -8,7 +8,6 @@ Lab512 Docs
 <img alt="Static Badge" src="https://img.shields.io/badge/MKDOCS-Latest-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/Python-3.10-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="python version"/>
 <img alt="GitHub contributors" src="https://img.shields.io/github/contributors-anon/gailunzhou/512Docs?style=for-the-badge&color=%238352de">
-
   <img src="https://img.shields.io/github/deployments/gailunzhou/512Docs/github-pages?style=for-the-badge" alt="Deployment Status">
 
 </div>

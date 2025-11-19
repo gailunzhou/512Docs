@@ -160,9 +160,9 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-修改 `api_key` 参数，这里可以用我的：`sk-13d9f0321ba6d49e4b57f9f44e9f1caad` 直接运行后可以看到LLM会返回一行文本内容示例如下图：
+修改 `api_key` 参数，这里可以用我的：`$secret-key` 直接运行后可以看到LLM会返回一行文本内容示例如下图：
 
-![Introduction to LLM APIs01](images/2025-11-12-Introduction%20to%20LLM%20APIs/Introduction%20to%20LLM%20APIs01.png)
+![Introduction to LLM APIs01](images/llm_arc_01.png)
 
 让我们详细解释一下：
 
@@ -355,7 +355,7 @@ while True: # 必须让对话在循环内进行否则单次对话就退出了
 from openai import OpenAI
 
 # 全局变量  
-api_key = "sk-7a9a9de83568404bac7b8cd1570ec239"  
+api_key = $secret-key
 base_url = "https://api.deepseek.com"
 
 # 使用的对话模型  
@@ -452,7 +452,7 @@ from openai import OpenAI
 import sys  
 
 # 全局变量  
-api_key = "sk-7a9a9de83568404bac7b8cd1570ec239"  
+api_key = $secret-key  
 base_url = "https://api.deepseek.com"  
 model = "deepseek-chat"  
 
