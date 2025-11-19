@@ -6,7 +6,7 @@ tags: secret-note git-crypt
 
 # 敏感信息处理说明
 
-先按照基础指南第一篇文章[环境配置](../basic/2025-11-8-firstDeploy.md) 完成 **git + git-crypt** 的环境配置。
+先按照基础指南的[环境配置](../basic/2025-11-8-firstDeploy.md) ，完成 **git 和 git-crypt** 的环境配置。
 
 ## git-crypt 初始化
 
@@ -34,10 +34,10 @@ git-crypt unlock .labsecret
 ## 添加敏感信息文件
 
 !!! warning
-    在上传敏感信息或文件前，一定要将其放置在 `docs/secret-files` 目录下, git-crypt 会自动对该目录下的文件进行加密处理
+    在上传敏感信息或文件前，务必将其放置在 `docs/secret-files` 目录下, git-crypt 会自动对该目录下的文件进行加密处理
 
-!!! danger "严重警告"
-    不要将 `.labsecret` 文件上传到远程仓库！一定要确保 `.labsecret` 文件已被添加到 `.gitignore` 文件中!
+!!! danger "危险警告"
+    不要将 `.labsecret` 文件上传到远程仓库！确保 `.labsecret` 文件已被添加到 `.gitignore` 文件中！
 
 如果你想自定义其他目录或文件的加密规则，可以编辑项目根目录下的 `.gitattributes` 文件，添加相应的路径和加密规则。例如：
 
