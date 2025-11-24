@@ -15,16 +15,16 @@ tags: 规范
 
 
 
+```text
+---lab
+date: 当前日期
+author: 作者名称
+category: 目录
+tags: 标签
+---
 ```
-<div class="article-meta" style="background: #f0f8ff; padding: 15px; border-left: 4px solid #2196f3; margin-bottom: 20px; border-radius: 4px;">
-<p style="margin: 0; color: #666; font-size: 0.9em;">
-<strong>📅 发布日期:</strong> 年-月-日 &nbsp;|&nbsp;
-<strong>👤 作者:</strong> XXXX &nbsp;|&nbsp;
-<strong>📁 分类:</strong> XXXX &nbsp;|&nbsp;
-<strong>🏷️ 标签:</strong> XXXX
-</p>
-</div>
-```
+
+其中 `category` 和 `tasg` 为空时将不显示， `date` 为空时将取当前日期
 
 
 ## 2. 正文格式规范

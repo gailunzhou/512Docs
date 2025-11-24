@@ -11,7 +11,7 @@ title: Changelog
 - [ ] 完成 repo 中 CI Test 部分的编写
 - [ ] 重新编写所有基础指南文档
 
-- [x] 完成 git-crypt 加密配置并编写[相关文档](secret-note/secret-note.md)
+- [x] 完成 git-crypt 加密配置并编写[相关文档](basic/secret-note.md)
 - [x] 完成 Repo 的 README 编写
 - [x] 完成 Github Actions 自动部署配置
 
