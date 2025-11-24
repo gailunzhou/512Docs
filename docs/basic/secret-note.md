@@ -6,7 +6,7 @@ tags: secret-note git-crypt
 
 # 敏感信息处理说明
 
-先按照基础指南的[环境配置](../basic/2025-11-8-firstDeploy.md) ，完成 **git 和 git-crypt** 的环境配置。
+先按照基础指南的[环境配置](first.md) ，完成 **git 和 git-crypt** 的环境配置。
 
 ## git-crypt 初始化
 

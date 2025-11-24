@@ -82,11 +82,11 @@ nav:
     - Changelog: changelog.md
 
   - 基础指南:
-    - 环境配置: basic/2025-11-8-firstDeploy.md
+    - 环境配置: basic/first.md
     - Markdown 语法: basic/2025-11-8-markdown-syntax.md
     - 文档格式规范: basic/2025-11-9-Format_specification.md
     - 多人协作: basic/2025-11-9-multi-cooperation.md
-    - 敏感文件处理: secret-note/secret-note.md
+    - 敏感文件处理: basic/secret-note.md
 
   - 软件: 
     - Introduction: software/index.md
