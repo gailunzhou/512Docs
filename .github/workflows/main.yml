@@ -40,11 +40,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Git User
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
