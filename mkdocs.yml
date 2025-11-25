@@ -1,6 +1,7 @@
 site_name: Lab512 Docs
 repo_name: 'Github/512Docs'
 repo_url: https://github.com/gailunzhou/512Docs
+edit_uri: https://github.com/gailunzhou/512Docs/edit/main/docs
 
 # 插件配置项
 plugins:
@@ -18,12 +19,16 @@ theme:
     - navigation.instant
     - navigation.top # 返回顶部按钮
     - navigation.tabs # 顶部导航标签页
+    - navigation.footer
+    - navigation.tracking
     - search.suggest # 搜索建议
     - search.highlight # 搜索结果高亮
     - content.tabs.link # 内容标签页支持锚点
     - content.code.copy
     - content.code.select
+    - content.code.annotate
     - content.action.edit
+    - content.action.view
     - search.suggest
     - search.highlight
     # - navigation.expand # 让分组默认展开
@@ -44,6 +49,7 @@ theme:
 markdown_extensions: 
   - meta
   - admonition
+  - footnotes
   - pymdownx.details
   - attr_list
   - def_list
