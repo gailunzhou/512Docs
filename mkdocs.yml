@@ -96,8 +96,12 @@ nav:
 
   - 软件: 
     - Introduction: software/index.md
+    - Web: basic/2025-11-8-firstDeploy.md
+    - ROS:
+      - ROS1: software/ROS/2025-11-30-ROS1.md
+      - Ubuntu系统镜像烧录: software/ROS/2025-11-30-ROS1-Ubuntu系统镜像烧录.md
     - Unity引擎: software/unity/2025-11-9-Unity引擎.md
-  
+
   - 硬件:
     - Introduction: hardware/index.md
 
