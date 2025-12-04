@@ -6,10 +6,10 @@
       
       
       
-        <link rel="prev" href="../2025-11-30-ROS1/">
+        <link rel="prev" href="../2025-11-30-ROS1-Ubuntu%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E7%83%A7%E5%BD%95/">
       
       
-        <link rel="next" href="../2025-12-3-ROS1-Ubuntu20.04%E5%AE%89%E8%A3%85ROS/">
+        <link rel="next" href="../../unity/2025-11-9-Unity%E5%BC%95%E6%93%8E/">
       
       
         
@@ -20,7 +20,7 @@
     
     
       
-        <title>Ubuntu系统镜像烧录 - Lab512 Docs</title>
+        <title>Ubuntu系统安装ROS - Lab512 Docs</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ubuntu2004" class="md-skip">
+        <a href="#ubuntu2004ros1" class="md-skip">
           跳转至
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ubuntu系统镜像烧录
+              Ubuntu系统安装ROS
             
           </span>
         </div>
@@ -949,6 +949,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025-11-30-ROS1-Ubuntu%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E7%83%A7%E5%BD%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubuntu系统镜像烧录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -968,7 +996,7 @@
   <span class="md-ellipsis">
     
   
-    Ubuntu系统镜像烧录
+    Ubuntu系统安装ROS
   
 
     
@@ -986,7 +1014,7 @@
   <span class="md-ellipsis">
     
   
-    Ubuntu系统镜像烧录
+    Ubuntu系统安装ROS
   
 
     
@@ -1012,22 +1040,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ubuntu2004" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubuntu20.04桌面安装
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu20.04桌面安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 镜像烧录
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. 镜像烧录">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 镜像文件
+        1. 换源
       
     </span>
   </a>
@@ -1035,10 +1063,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-balenaetcher" class="md-nav__link">
+  <a href="#2-ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2 使用”balenaEtcher”烧录
+        2. 安装Ubuntu桌面版
       
     </span>
   </a>
@@ -1046,22 +1074,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#13" class="md-nav__link">
+  <a href="#3-xrdp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3 基础设置
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.3 基础设置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#131" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3.1 显示设置
+        3. 安装xrdp
       
     </span>
   </a>
@@ -1069,10 +1085,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#132-wlanwifi" class="md-nav__link">
+  <a href="#4-wifi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3.2 WLAN设置（连接个人热点/个人WiFi方法）
+        4. 个人热点/Wifi情况
       
     </span>
   </a>
@@ -1080,43 +1096,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#133-wlan" class="md-nav__link">
+  <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3.3 WLAN设置（用笔记本作为路由器并使用网线连接树莓派方法）
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 第一次开机
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 第一次开机">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 初始密码&amp;进入系统
+        5. 网线连接的情况
       
     </span>
   </a>
@@ -1124,21 +1107,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-wifi" class="md-nav__link">
+  <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 检查自己是否连接上WIFI方法
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-wifi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3 更改WIFI配置
+        6. 系统汉化方法
       
     </span>
   </a>
@@ -1151,22 +1123,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-ssh" class="md-nav__link">
+  <a href="#ros" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 电脑SSH远程连接
+        ROS安装
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. 电脑SSH远程连接">
+    <nav class="md-nav" aria-label="ROS安装">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-ip" class="md-nav__link">
+  <a href="#1_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 树莓派IP查看
+        1. 设置安装源
       
     </span>
   </a>
@@ -1174,10 +1146,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-root" class="md-nav__link">
+  <a href="#2-key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 添加root用户
+        2. 设置Key
       
     </span>
   </a>
@@ -1185,10 +1157,65 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-mobaxterm" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 MobaXterm操作
+        3. 安装
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 设置环境变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 安装构建依赖工具
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-rosdep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 初始化rosdep
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61-rosdep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 rosdep意外解决参考
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-ros1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 测试ROS1
       
     </span>
   </a>
@@ -1204,34 +1231,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../2025-12-3-ROS1-Ubuntu20.04%E5%AE%89%E8%A3%85ROS/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ubuntu系统安装ROS
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1911,22 +1910,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ubuntu2004" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ubuntu20.04桌面安装
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu20.04桌面安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 镜像烧录
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. 镜像烧录">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 镜像文件
+        1. 换源
       
     </span>
   </a>
@@ -1934,10 +1933,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-balenaetcher" class="md-nav__link">
+  <a href="#2-ubuntu" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2 使用”balenaEtcher”烧录
+        2. 安装Ubuntu桌面版
       
     </span>
   </a>
@@ -1945,22 +1944,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#13" class="md-nav__link">
+  <a href="#3-xrdp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3 基础设置
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.3 基础设置">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#131" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3.1 显示设置
+        3. 安装xrdp
       
     </span>
   </a>
@@ -1968,10 +1955,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#132-wlanwifi" class="md-nav__link">
+  <a href="#4-wifi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3.2 WLAN设置（连接个人热点/个人WiFi方法）
+        4. 个人热点/Wifi情况
       
     </span>
   </a>
@@ -1979,43 +1966,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#133-wlan" class="md-nav__link">
+  <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3.3 WLAN设置（用笔记本作为路由器并使用网线连接树莓派方法）
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 第一次开机
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 第一次开机">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 初始密码&amp;进入系统
+        5. 网线连接的情况
       
     </span>
   </a>
@@ -2023,21 +1977,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-wifi" class="md-nav__link">
+  <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 检查自己是否连接上WIFI方法
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-wifi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3 更改WIFI配置
+        6. 系统汉化方法
       
     </span>
   </a>
@@ -2050,22 +1993,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-ssh" class="md-nav__link">
+  <a href="#ros" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 电脑SSH远程连接
+        ROS安装
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. 电脑SSH远程连接">
+    <nav class="md-nav" aria-label="ROS安装">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-ip" class="md-nav__link">
+  <a href="#1_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 树莓派IP查看
+        1. 设置安装源
       
     </span>
   </a>
@@ -2073,10 +2016,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-root" class="md-nav__link">
+  <a href="#2-key" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 添加root用户
+        2. 设置Key
       
     </span>
   </a>
@@ -2084,10 +2027,65 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-mobaxterm" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 MobaXterm操作
+        3. 安装
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 设置环境变量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 安装构建依赖工具
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-rosdep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 初始化rosdep
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61-rosdep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 rosdep意外解决参考
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-ros1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 测试ROS1
       
     </span>
   </a>
@@ -2116,7 +2114,7 @@
 
 
   
-    <a href="https://github.com/gailunzhou/512Docs/edit/main/docs/software/ROS/2025-11-30-ROS1-Ubuntu系统镜像烧录.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/gailunzhou/512Docs/edit/main/docs/software/ROS/2025-12-3-ROS1-Ubuntu20.04安装ROS.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -2125,7 +2123,7 @@
     
       
     
-    <a href="https://github.com/gailunzhou/512Docs/raw/main/docs/software/ROS/2025-11-30-ROS1-Ubuntu系统镜像烧录.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/gailunzhou/512Docs/raw/main/docs/software/ROS/2025-12-3-ROS1-Ubuntu20.04安装ROS.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"></path></svg>
     </a>
@@ -2134,142 +2132,267 @@
 
 <div class="article-meta" style="background: #f0f8ff; padding: 15px; border-left: 4px solid #2196f3; margin-bottom: 20px; border-radius: 4px;">
   <p style="margin: 0; color: #666; font-size: 0.9em;">
-    <strong>📅 发布日期:</strong> 2025-11-30 &nbsp;|&nbsp; <strong>👤 作者:</strong> CCChiJi &nbsp;|&nbsp; <strong>📁 分类:</strong> 软件 &nbsp;|&nbsp; <strong>🏷️ 标签:</strong> ROS
+    <strong>📅 发布日期:</strong> 2025-12-3 &nbsp;|&nbsp; <strong>👤 作者:</strong> CCChiJi &nbsp;|&nbsp; <strong>📁 分类:</strong> 软件 &nbsp;|&nbsp; <strong>🏷️ 标签:</strong> ROS
   </p>
 </div>
 
-<h1 id="ubuntu2004">Ubuntu20.04系统镜像烧录&amp;基础配置</h1>
+<h1 id="ubuntu2004ros1">Ubuntu20.04安装ROS1</h1>
 <div class="admonition tip">
 <p class="admonition-title">tips</p>
 <p>所有指令的输入不需要全部敲，只用输入前几个字母再按Tab就会自动补齐或列出可选项</p>
 </div>
-<h2 id="1">1. 镜像烧录</h2>
-<h3 id="11">1.1 镜像文件</h3>
-<p>镜像文件可以直接去官方下载</p>
-<p>或者在<a href="https://blog.csdn.net/weixin_45912291/article/details/108900602">清华大学开源软件镜像站进行下载</a> </p>
-<p>注意要下载的文件为</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/Ubuntu_Img.png" data-desc-position="bottom"><img alt="Ubuntu-Img" src="../images/Ubuntu_Img.png"></a></p>
-<h3 id="12-balenaetcher">1.2 使用”balenaEtcher”烧录</h3>
-<p>balenaEtcher可以替换为别的烧录软件但个人推荐用该软件</p>
-<p>把给树莓派使用的TF卡插入读卡器并连接上电脑，打开balenaEtcher</p>
-<p>左侧选择要烧录的镜像文件，中间为要烧录的目的盘，右侧为烧录开始按钮</p>
-<div class="admonition warning">
-<p class="admonition-title">警告</p>
-<p>一定要检查选择的盘，若选错会清空你选错的盘中的所有数据！</p>
-</div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/%E7%83%A7%E5%BD%95.png" data-desc-position="bottom"><img alt="烧录" src="../images/%E7%83%A7%E5%BD%95.png"></a></p>
-<h3 id="13">1.3 基础设置</h3>
-<h4 id="131">1.3.1 显示设置</h4>
-<p>烧录完成后弹出TF卡再插上电脑会显示一个boot盘</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/boot%E7%9B%98.png" data-desc-position="bottom"><img alt="boot盘" src="../images/boot%E7%9B%98.png"></a></p>
-<p>打开boot盘中的config.txt，可直接用记事本或VScode</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/config.png" data-desc-position="bottom"><img alt="config" src="../images/config.png"></a></p>
-<p>找到橙色线所画位置，红色框为需要加入的代码</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>hdmi_force_hotplug=1
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>hdmi_mode=16
-</code></pre></div>
-<p>加入后<kbd>Ctrl</kbd> + <kbd>s</kbd>保存</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/hdmiconfig.png" data-desc-position="bottom"><img alt="hdmiconfig" src="../images/hdmiconfig.png"></a></p>
-<h4 id="132-wlanwifi">1.3.2 WLAN设置（连接个人热点/个人WiFi方法）</h4>
-<p>找到network-config文件使用VScode打开</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/network-config.png" data-desc-position="bottom"><img alt="network-config" src="../images/network-config.png"></a></p>
-<p>图中灰色选中部分，改为自己的WIFI和密码（第一排的“myhomewifi”是WIFI名，前后要加引号（英文输入情况下），第二排的“S3kr1t”是密码）</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/network-config2.png" data-desc-position="bottom"><img alt="network-config2" src="../images/network-config2.png"></a></p>
-<div class="admonition tip">
-<p class="admonition-title">tips</p>
-<p>如果你的WIFI名中有空格，例如<code>xiao mi123456</code>则设置里的WIFI名称应该为
-<code>"xiao-mi123456"</code></p>
-</div>
-<p>设置完成后<kbd>Ctrl</kbd> + <kbd>s</kbd>保存</p>
-<h4 id="133-wlan">1.3.3 WLAN设置（用笔记本作为路由器并使用网线连接树莓派方法）</h4>
-<p>参考: <a href="https://blog.csdn.net/Mr_zhubao/article/details/135876595">用笔记本作为路由器并使用网线连接树莓派方法</a></p>
-<div class="admonition tip">
-<p class="admonition-title">tips</p>
-<p>目前没有设置为静态ip树莓派开关机一次ip可能就会变一次，先继续</p>
-<p>这种方法后面还是可以通过下文<strong>2.3 更改WIFI配置</strong>回到使用热点进行联网的方式</p>
-<p>因为使用网线配好网络以后无法进行无线ssh连接，目前推荐使用热点/个人WIFI方式</p>
-</div>
-<h2 id="2">2. 第一次开机</h2>
-<p>给树莓派接上屏幕并插入烧好系统的TF卡，再把键盘给接上USB口，接好电源开机。</p>
-<h3 id="21">2.1 初始密码&amp;进入系统</h3>
-<p>根据user.data文件里的内容可知初始账号和密码都是
-<code>ubuntu</code>
-并且进入后需要立即更换</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/userdata.png" data-desc-position="bottom"><img alt="userdata" src="../images/userdata.png"></a></p>
-<p>登录后会提示要求修改密码：再输入一次原来的密码<code>ubuntu</code>后可输入新密码，例如<code>123456</code>，会要求再输入一次新密码，输入以后就可以进入系统</p>
-<h3 id="22-wifi">2.2 检查自己是否连接上WIFI方法</h3>
-<p>输入
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>su
-</code></pre></div>
-进入root模式<p></p>
-<p>输入
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ping<span class="w"> </span>www.baidu.com
-</code></pre></div>
-（如果是连接自己手机的热点可直接在手机上查看是否连接上）<p></p>
-<p>如果返回
-<code>Temporary failure in name resolution</code>
-说明没有连接上，按照后面步骤检查wifi设置并重试以上操作</p>
-<h3 id="23-wifi">2.3 更改WIFI配置</h3>
-<p>输入
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>/etc/netplan
-</code></pre></div><p></p>
-<p>输入
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ls
-</code></pre></div>
-查看，会列出一个<code>50-cloud-init.yaml</code>的文件<p></p>
-<p>这里保险起见先将原来的文件复制一份</p>
-<p>输入
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cp<span class="w"> </span><span class="m">50</span>-cloud-init.yaml<span class="w"> </span>/etc/netplan/50-cloud-init.yaml.1
-</code></pre></div>
-完成复制<p></p>
-<p>输入
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>vi<span class="w"> </span><span class="m">50</span>-cloud-init.yaml
-</code></pre></div>
-使用Vim查看/编辑<code>50-cloud-init.yaml</code>文件<p></p>
-<div class="admonition tip">
-<p>这个镜像是默认安装了vim编辑器，如果没有的话可以用nano编译器，也可以直接安装vim，系统会提示安装指令<code>sudo apt install....</code></p>
-</div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/WLANconfig.png" data-desc-position="bottom"><img alt="WLANconfig" src="../images/WLANconfig.png"></a></p>
-<p>按一下键盘<kbd>i</kbd>键进入输入模式，修改自己的wifi和密码，修改完成后键盘输入一个<code>:</code>号会在屏幕左下角看见<code>:</code>然后再输入<code>wq!</code>即强制保存并退出（只退出就是q，保存退出是wq，加<code>!</code>表示强制）</p>
-<p>输入
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>netplan<span class="w"> </span>--debug<span class="w"> </span>apply
-</code></pre></div>
-让系统检查一遍<p></p>
-<p>检查完成后输入
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>reboot
-</code></pre></div>
-重启一遍，之后登录完再
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ping<span class="w"> </span>www.baidu.com
-</code></pre></div>
-一次看是否连接上 <em>（连接上会看到ping到多少byte，就代表连接上WiFi了）</em><p></p>
-<h2 id="3-ssh">3. 电脑SSH远程连接</h2>
-<p>我使用的是MobaXterm，电脑和树莓派要在同一wifi下</p>
-<h3 id="31-ip">3.1 树莓派IP查看</h3>
-<p>输入
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ip<span class="w"> </span>add
-</code></pre></div>
-即可查看树莓派的ip地址<p></p>
-<div class="admonition note">
-<p>图中画红线的部分就是树莓派的IP地址，先记下来</p>
-</div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ipadd.png" data-desc-position="bottom"><img alt="ipadd" src="../images/ipadd.png"></a></p>
-<h3 id="32-root">3.2 添加root用户</h3>
+<h2 id="ubuntu2004">Ubuntu20.04桌面安装</h2>
+<h3 id="1">1. 换源</h3>
+<p>使用MobaXterm远程连接上树莓派以后</p>
 <p>输入指令
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>passwd<span class="w"> </span>root
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/apt/sources.list
 </code></pre></div><p></p>
-<p>再输入两次密码即可</p>
-<h3 id="33-mobaxterm">3.3 MobaXterm操作</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/MobaX1.png" data-desc-position="bottom"><img alt="MobaX1" src="../images/MobaX1.png"></a></p>
+<p>会弹出以下内容</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/source.png" data-desc-position="bottom"><img alt="source" src="../images/source.png"></a></p>
+<p>按<kbd>i</kbd>进入输入模式</p>
+<p>将原来的源 <em>（前面 </em><em>没有加 #</em><em> 的）</em> 前面加上“#”注释掉</p>
+<p>在最下面粘贴上国内的源</p>
+<div class="admonition tip">
+<p>我使用的是中科大源，清华源我在使用的时候后面会一直显示无法解包，具体原因不清楚</p>
+</div>
+<p>中科大源：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/ubuntu-ports/<span class="w"> </span>focal<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>deb-src<span class="w"> </span>https://mirrors.ustc.edu.cn/ubuntu-ports/<span class="w"> </span>focal<span class="w"> </span>main<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/ubuntu-ports/<span class="w"> </span>focal-updates<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>deb-src<span class="w"> </span>https://mirrors.ustc.edu.cn/ubuntu-ports/<span class="w"> </span>focal-updates<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/ubuntu-ports/<span class="w"> </span>focal-backports<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>deb-src<span class="w"> </span>https://mirrors.ustc.edu.cn/ubuntu-ports/<span class="w"> </span>focal-backports<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>deb<span class="w"> </span>https://mirrors.ustc.edu.cn/ubuntu-ports/<span class="w"> </span>focal-security<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>deb-src<span class="w"> </span>https://mirrors.ustc.edu.cn/ubuntu-ports/<span class="w"> </span>focal-security<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># deb https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># deb-src https://mirrors.ustc.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse</span>
+</code></pre></div>
+<p>清华源：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">########   Ubuntu20.04LTS 清华镜像源   ###############</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>deb<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/<span class="w"> </span>focal<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>deb<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/<span class="w"> </span>focal-updates<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>deb<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/<span class="w"> </span>focal-backports<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>deb<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/ubuntu/<span class="w"> </span>focal-security<span class="w"> </span>main<span class="w"> </span>restricted<span class="w"> </span>universe<span class="w"> </span>multiverse
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1"># 预发布软件源，不建议启用</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="c1"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse</span>
+</code></pre></div>
+<p>粘贴好后会是如图形式:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/source2.png" data-desc-position="bottom"><img alt="source2" src="../images/source2.png"></a></p>
+<p>粘贴上后按<kbd>Esc</kbd>
+先输入一个冒号 <code>:</code> <em>(英文输入)</em></p>
+<p>再输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>wq!
+</code></pre></div><p></p>
+<p>按<kbd>Enter</kbd>退出编辑</p>
+<p>输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div><p></p>
+<p>这个的速度和自己网速有关</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/aptupdate.png" data-desc-position="bottom"><img alt="aptupdate" src="../images/aptupdate.png"></a></p>
+<p>完成后</p>
+<p>输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</code></pre></div><p></p>
+<p>或输入，可跳过下面一步 <em>（以防意外建议一步一步来查看安装是否有问题）</em>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+</code></pre></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/aptupgrade.png" data-desc-position="bottom"><img alt="aptupgrade" src="../images/aptupgrade.png"></a><p></p>
+<p>如果是<code>sudo apt upgrade</code>，此时需要输入<code>y/Y</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/aptupgrade2.png" data-desc-position="bottom"><img alt="aptupgrade2" src="../images/aptupgrade2.png"></a></p>
+<p>然后就等待更新，更新快慢和自己网速有关</p>
+<div class="admonition note">
+<p class="admonition-title">注意</p>
+<p>如果出现断网或别的情况就先<kbd>ctrl</kbd>+<kbd>c</kbd>
+再</p>
+<p><code>sudo reboot</code></p>
+<p>重启一下
+然后再</p>
+<p><code>sudo apt update</code></p>
+<p>然后再
+<code>sudo apt upgrade</code></p>
+<p>重新更新</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/updatedone.png" data-desc-position="bottom"><img alt="updatedone" src="../images/updatedone.png"></a></p>
+<p>进行到这一步说明换源已完成</p>
+<h3 id="2-ubuntu">2. 安装Ubuntu桌面版</h3>
+<p>输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ubuntu-desktop
+</code></pre></div><p></p>
+<p>或输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ubuntu-desktop<span class="w"> </span>-y
+</code></pre></div><p></p>
+<p>可跳过下面一步 <em>（以防意外建议一步一步来查看安装是否有问题）</em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ubuntuinstall.png" data-desc-position="bottom"><img alt="ubuntuinstall" src="../images/ubuntuinstall.png"></a></p>
+<p>如果是<code>sudo apt install ubuntu-desktop</code>，此时需要输入<code>y/Y</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/ubuntuinstall2.png" data-desc-position="bottom"><img alt="ubuntuinstall2" src="../images/ubuntuinstall2.png"></a></p>
+<p>进行到这一步说明安装Ubuntu桌面版已完成</p>
+<h3 id="3-xrdp">3. 安装xrdp</h3>
+<p>输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>xrdp
+</code></pre></div><p></p>
+<p>或输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>xrdp<span class="w"> </span>-y
+</code></pre></div><p></p>
+<p>可跳过下面一步 <em>（以防意外建议一步一步来查看安装是否有问题）</em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/installxrdp.png" data-desc-position="bottom"><img alt="installxrdp" src="../images/installxrdp.png"></a></p>
+<p>如果是<code>sudo apt install xrdp</code>，此时需要输入<code>y/Y</code></p>
+<p>完成后输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>/etc/init.d/xrdp<span class="w"> </span>restart
+</code></pre></div><p></p>
+<p>输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>reboot
+</code></pre></div><p></p>
+<p>重启一次</p>
+<p>重启后输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf
+</code></pre></div><p></p>
+<p>并在里面添加以下内容（按<kbd>i</kbd>进入编辑模式）</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>greeter-show-manual-login<span class="o">=</span><span class="nb">true</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>allow-guest<span class="o">=</span><span class="nb">false</span>
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/add.png" data-desc-position="bottom"><img alt="add" src="../images/add.png"></a></p>
+<p>添加后按<kbd>Esc</kbd>
+先输入一个冒号 <code>:</code> <em>(英文输入)</em></p>
+<p>再输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>wq!
+</code></pre></div><p></p>
+<p>按<kbd>Enter</kbd>退出编辑</p>
+<p>退出后输入
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>reboot
+</code></pre></div><p></p>
+<p>重启一次</p>
+<h3 id="4-wifi">4. 个人热点/Wifi情况</h3>
+<p>打开电脑的远程桌面连接 <em>(如果是使用网线连接的跳过这里看第5小节)</em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/phone1.png" data-desc-position="bottom"><img alt="phone1" src="../images/phone1.png"></a></p>
+<p>登录需要输入ip地址</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/phone2.png" data-desc-position="bottom"><img alt="phone2" src="../images/phone2.png"></a></p>
+<p>然后就是用户名<code>ubuntu</code>和自己设定的密码
+进入界面</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/phone3.png" data-desc-position="bottom"><img alt="phone3" src="../images/phone3.png"></a></p>
 <p>↓</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/MobaX2.png" data-desc-position="bottom"><img alt="MobaX2" src="../images/MobaX2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/phone4.png" data-desc-position="bottom"><img alt="phone4" src="../images/phone4.png"></a></p>
 <p>↓</p>
-<p>第一个地方就是树莓派的IP地址，第二个地方打勾然后填<code>ubuntu</code>最后选OK就行了</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/MobaX3.png" data-desc-position="bottom"><img alt="MobaX3" src="../images/MobaX3.png"></a></p>
-<p>连接上后输入账号<code>ubuntu</code>和你之前设置的密码</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/MobaX4.png" data-desc-position="bottom"><img alt="MobaX4" src="../images/MobaX4.png"></a></p>
+<div class="admonition note">
+<p>如果提醒你更新到22的版本就先不要更新，就用20.04版本的</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/phone5.png" data-desc-position="bottom"><img alt="phone5" src="../images/phone5.png"></a></p>
+<p>↓</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/phone6.png" data-desc-position="bottom"><img alt="phone6" src="../images/phone6.png"></a></p>
+<p>↓</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/phone7.png" data-desc-position="bottom"><img alt="phone7" src="../images/phone7.png"></a></p>
+<p>↓</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/phone8.png" data-desc-position="bottom"><img alt="phone8" src="../images/phone8.png"></a></p>
+<p>↓
+然后就可以点屏幕右上角
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/phone9.png" data-desc-position="bottom"><img alt="phone9" src="../images/phone9.png"></a></p>
+<p>↓</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/phone10.png" data-desc-position="bottom"><img alt="phone10" src="../images/phone10.png"></a></p>
+<p>后面安装ROS的操作还是用MobaXterm操作，远程桌面连接我这里用着感觉延迟挺高，看自己情况吧</p>
+<h3 id="5">5. 网线连接的情况</h3>
+<p>给树莓派接上屏幕、键盘、鼠标进入ubuntu桌面</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/wlanline1.png" data-desc-position="bottom"><img alt="wlanline1" src="../images/wlanline1.png"></a></p>
+<p>这个位置就会显示wifi的连接（系统一开始默认是英文的，开头会有几个弹窗直接跳过就行）</p>
+<p>按以下步骤进行操作:</p>
+<p><strong>1</strong>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/wlanline2.png" data-desc-position="bottom"><img alt="wlanline2" src="../images/wlanline2.png"></a></p>
+<p><strong>2</strong>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/wlanline3.png" data-desc-position="bottom"><img alt="wlanline3" src="../images/wlanline3.png"></a></p>
+<p><strong>3</strong> 
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/wlanline4.png" data-desc-position="bottom"><img alt="wlanline4" src="../images/wlanline4.png"></a></p>
+<div class="admonition note">
+<p class="admonition-title">注意</p>
+<p>ip地址不一定要为第三步那样的，但是整体规律要一致，<br>
+DNS和Gateway的ip与Address的区别，Netmask的地址为 <strong>255.255.255.0</strong></p>
+</div>
+<p>这样树莓派的ip地址就被设置为静态ip（固定）了，如果要用电脑远程连接，只要保持在同一wifi下直接连接就可以</p>
+<h3 id="6">6. 系统汉化方法</h3>
+<p>参考: <a href="https://blog.csdn.net/hwh20095000060/article/details/121438836">系统汉化方法</a></p>
+<h2 id="ros">ROS安装</h2>
+<h3 id="1_1">1. 设置安装源</h3>
+<p>使用国内清华源或中科大源，我前面Ubuntu使用的就是中科大源这里也就使用中科大源了</p>
+<p>中科大源设置（直接复制）:</p>
+<p>终端输入并回车以下内容
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'. /etc/lsb-release &amp;&amp; echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ `lsb_release -cs` main" &gt; /etc/apt/sources.list.d/ros-latest.list'</span>
+</code></pre></div><p></p>
+<p>清华源设置（直接复制）:</p>
+<p>终端输入并回车以下内容
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">'. /etc/lsb-release &amp;&amp; echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ `lsb_release -cs` main" &gt; /etc/apt/sources.list.d/ros-latest.list'</span>
+</code></pre></div><p></p>
+<h3 id="2-key">2. 设置Key</h3>
+<p>终端输入并回车以下内容（直接复制）:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>sudo<span class="w"> </span>apt-key<span class="w"> </span>adv<span class="w"> </span>--keyserver<span class="w"> </span><span class="s1">'hkp://keyserver.ubuntu.com:80'</span><span class="w"> </span>--recv-key<span class="w"> </span>C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+</code></pre></div><p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/key.png" data-desc-position="bottom"><img alt="key" src="../images/key.png"></a></p>
+<h3 id="3">3. 安装</h3>
+<p>终端输入并回车以下内容（直接复制）:</p>
+<p><em>(更新命令)</em></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rosinstall.png" data-desc-position="bottom"><img alt="rosinstall" src="../images/rosinstall.png"></a></p>
+<p>然后终端输入并回车以下内容（直接复制）:</p>
+<p><em>(安装命令)</em></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-noetic-desktop-full
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">注意</p>
+<p>由于网络原因，导致连接超时，可能会安装失败，可以多次重复调用 <strong>更新命令</strong> 和 <strong>安装命令</strong>，直至成功</p>
+</div>
+<h3 id="4">4. 设置环境变量</h3>
+<p>设置环境变量是为了方便每次打开新终端可以直接使用，不需要再换为root模式</p>
+<p>终端输入并回车以下内容（直接复制）:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"source /opt/ros/noetic/setup.bash"</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</code></pre></div><p></p>
+<p>然后再刷新一下环境变量，命令如下</p>
+<p>终端输入并回车以下内容（直接复制）:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div><p></p>
+<h3 id="5_1">5. 安装构建依赖工具</h3>
+<p>终端输入并回车以下内容（直接复制）:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-rosdep<span class="w"> </span>python3-rosinstall<span class="w"> </span>python3-rosinstall-generator<span class="w"> </span>python3-wstool<span class="w"> </span>build-essential
+</code></pre></div><p></p>
+<h3 id="6-rosdep">6. 初始化rosdep</h3>
+<p>第一步：</p>
+<p>终端输入并回车以下内容（直接复制）:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>rosdep<span class="w"> </span>init
+</code></pre></div><p></p>
+<p>第二步：</p>
+<p>终端输入并回车以下内容（直接复制）:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>rosdep<span class="w"> </span>update
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">注意</p>
+<p>由于网络原因可能出现读取超时的报错，只需要重新执行第二步，直到完全初始化完成</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rosdep.png" data-desc-position="bottom"><img alt="rosdep" src="../images/rosdep.png"></a></p>
+<h3 id="61-rosdep">6.1 rosdep意外解决参考</h3>
+<p>可能会出现一些问题，参考如下：</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rosdep2.png" data-desc-position="bottom"><img alt="rosdep2" src="../images/rosdep2.png"></a></p>
+<h3 id="7-ros1">7. 测试ROS1</h3>
+<p>以上步骤都完成后即可测试ROS1</p>
+<p>终端输入（直接复制）
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>roscore
+</code></pre></div><p></p>
+<p>后打开一个新的终端</p>
+<p>输入（直接复制）
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>rosrun<span class="w"> </span>turtlesim<span class="w"> </span>turtlesim_node
+</code></pre></div><p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rostest1.png" data-desc-position="bottom"><img alt="rostest1" src="../images/rostest1.png"></a></p>
+<p>回车后屏幕会出现一个新窗口是一个小海龟</p>
+<p>再打开一个新终端输入（直接复制）
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>rosrun<span class="w"> </span>turtlesim<span class="w"> </span>turtle_teleop_key
+</code></pre></div><p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rostest2.png" data-desc-position="bottom"><img alt="rostest2" src="../images/rostest2.png"></a></p>
+<p>回车后将鼠标停留在当前终端，使用键盘的上下左右键（不是WASD）可以控制小海龟运动</p>
 <div class="admonition success">
-<p class="admonition-title">成功</p>
-<p>如果看到以上界面说明配置正确，基础部分已完成，后续按个人需要可不用给树莓派连接显示屏幕、键盘和鼠标</p>
+<p class="admonition-title">完成</p>
+<p>如果小海龟按照你的控制正常运动说明ROS1已完成安装且功能正常</p>
 </div>
 
 
@@ -2308,7 +2431,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚">
         
           
-          <a href="../2025-11-30-ROS1/" class="md-footer__link md-footer__link--prev" aria-label="上一页: ROS1">
+          <a href="../2025-11-30-ROS1-Ubuntu%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F%E7%83%A7%E5%BD%95/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Ubuntu系统镜像烧录">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -2318,20 +2441,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                ROS1
+                Ubuntu系统镜像烧录
               </div>
             </div>
           </a>
         
         
           
-          <a href="../2025-12-3-ROS1-Ubuntu20.04%E5%AE%89%E8%A3%85ROS/" class="md-footer__link md-footer__link--next" aria-label="下一页: Ubuntu系统安装ROS">
+          <a href="../../unity/2025-11-9-Unity%E5%BC%95%E6%93%8E/" class="md-footer__link md-footer__link--next" aria-label="下一页: Unity引擎">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Ubuntu系统安装ROS
+                Unity引擎
               </div>
             </div>
             <div class="md-footer__button md-icon">
