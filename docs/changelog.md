@@ -20,3 +20,20 @@ title: Changelog
 - [x] lab512 插件的初步开发
     - [x] .lab 文件解析
     - [x] 自动渲染 meta 信息
+
+## CCChiJi
+
+### 2025-12
+
+- [ ] ROS1部分内容
+    - [x] 树莓派安装Ubuntu20.04
+    - [x] Ubuntu20.04安装ROS
+    - [x] Arduino部分
+    - [ ] ros_arduino_bridge上传
+    - [ ] 雷达使用的注意事项
+    - [ ] 进行SLAM雷达建图的准备工作
+    - [ ] Gmapping建图
+    - [ ] 地图保存与地图服务
+    - [ ] amcl定位
+    - [ ] 路径规划
+    - [ ] 自主导航式建图
