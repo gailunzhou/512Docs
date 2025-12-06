@@ -101,6 +101,7 @@ nav:
       - ROS1: software/ROS/2025-11-30-ROS1.md
       - Ubuntu系统镜像烧录: software/ROS/2025-11-30-ROS1-Ubuntu系统镜像烧录.md
       - Ubuntu系统安装ROS: software/ROS/2025-12-3-ROS1-Ubuntu20.04安装ROS.md
+      - 底盘控制-Arduino部分: software/ROS/2025-12-4-ROS1-Arduino部分.md
     - Unity引擎: software/unity/2025-11-9-Unity引擎.md
 
   - 硬件:
