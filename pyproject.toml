@@ -9,6 +9,7 @@ description = "MkDocs plugin for Lab512"
 dependencies = [
     "mkdocs>=1.4",
     "PyYAML",
+    "mkdocs-glightbox>=0.4.0",
 ]
 
 [tool.setuptools.packages.find]
