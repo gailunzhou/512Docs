@@ -7,7 +7,8 @@ name = "mkdocs-lab512-plugin"
 version = "0.1.0"
 description = "MkDocs plugin for Lab512"
 dependencies = [
-    "mkdocs>=1.4",
+    "mkdocs>=1.5",
+    "mkdocs-material>=9.5.24",
     "PyYAML",
     "mkdocs-glightbox>=0.4.0",
 ]
