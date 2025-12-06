@@ -29,13 +29,11 @@ cgy或者你们的学姐学长会提供一个压缩包，里面包含了上述�
 
 ## 配置 Git 
 
-### 什么是 Git
-
 - **Git** 是版本控制工具
 
 - **Github** 是基于 Git 技术的代码托管平台，一般我们叫它为远程仓库，每个仓库存放的都是不同的项目代码
 
-**两者不能划等号！**
+**前者用于控制代码版本清晰，后者是主流的托管代码的平台，请勿混淆**
 
 ### 注册 Github 账号
 如果你还没有 Github 账号，先去 [Github 官网](https://github.com/join) 注册一个新账号
@@ -74,7 +72,15 @@ git config --global user.email "你的Github注册邮箱"
 git clone https://github.com/gailunzhou/512Docs
 ```
 
-执行完成后，`D:/lab512` 目录下会多出一个 `512Docs` 目录。使用VSCode打开这个目录（或者进入这个目录下执行 `code .` 命令），接下来就可以愉快地编写文档啦！
+执行完成后，`D:/lab512` 目录下会多出一个 `512Docs` 目录。
+
+进入这个目录，用pip安装mkdocs和本地的插件
+
+```bash
+pip install -e .
+```
+
+使用VSCode打开这个目录（或者在这个目录下执行 `code .` 命令），接下来就可以愉快地编写文档啦！
 
 ### 本地预览
 
@@ -117,7 +123,42 @@ mkdocs serve
 3. **Commit** 你的修改（可以多次提交，用了 Git 的暂存区功能，命令行里是 `git add `）
 4. **Push** 提交到远程仓库
 
-以上步骤缺一不可，如果你觉得每次手动pull麻烦，可以在 VSCode 里设置自动同步。详细可以看这个[Issue](https://github.com/gailunzhou/512Docs/issues/1)
+```mermaid
+graph LR
+    P[Pull] --> M[修改] --> A[Add] --> C[Commit] --> P2{Push} --> F[完成]
+    C --> R{更多修改?}
+    R -- 是 --> A
+    P2 -- 冲突 --> S[解决] --> P3[重新Pull] --> F2[重新Add] --> F3[重新Commit] --> P2
+```
+
+对应的bash命令如下：
+
+```bash
+# 1. 开始工作前拉取最新代码
+git pull origin main
+
+# 2. 进行本地修改...
+
+# 3. 将修改添加到暂存区
+git add file1.txt file2.txt
+# 或添加所有修改
+git add .
+
+# 4. 提交到本地仓库
+git commit -m "描述你的修改"
+
+# 5. 推送修改到远程仓库
+git push origin main
+
+# 6. 如果遇到冲突...
+git pull origin main  # 拉取最新代码
+# 手动解决冲突后
+git add .
+git commit -m "解决冲突"
+git push origin main
+```
+
+以上步骤缺一不可，用VSCode自带的版本控制图形化工具会方便很多，如果你觉得每次手动pull麻烦，可以在 VSCode 里设置自动同步。详细可以看这个[Issue](https://github.com/gailunzhou/512Docs/issues/1)
 
 ### 第一次提交
 
