@@ -703,17 +703,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#git_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        什么是 Git
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#github" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -725,7 +714,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#git_2" class="md-nav__link">
+  <a href="#git_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         配置 Git 用户信息
@@ -791,7 +780,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#git_3" class="md-nav__link">
+  <a href="#git_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Git 操作
@@ -1933,17 +1922,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#git_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        什么是 Git
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#github" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1955,7 +1933,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#git_2" class="md-nav__link">
+  <a href="#git_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         配置 Git 用户信息
@@ -2021,7 +1999,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#git_3" class="md-nav__link">
+  <a href="#git_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Git 操作
@@ -2133,7 +2111,6 @@
 <p>把以上如 <code>git</code>, <code>git-crypt</code> 的安装目录添加到<code>PATH</code>里就行（不会就去问AI）</p>
 </div>
 <h2 id="git">配置 Git</h2>
-<h3 id="git_1">什么是 Git</h3>
 <ul>
 <li>
 <p><strong>Git</strong> 是版本控制工具</p>
@@ -2142,14 +2119,14 @@
 <p><strong>Github</strong> 是基于 Git 技术的代码托管平台，一般我们叫它为远程仓库，每个仓库存放的都是不同的项目代码</p>
 </li>
 </ul>
-<p><strong>两者不能划等号！</strong></p>
+<p><strong>前者用于控制代码版本清晰，后者是主流的托管代码的平台，请勿混淆</strong></p>
 <h3 id="github">注册 Github 账号</h3>
 <p>如果你还没有 Github 账号，先去 <a href="https://github.com/join">Github 官网</a> 注册一个新账号</p>
 <div class="admonition warning 网络问题">
 <p class="admonition-title">Warning</p>
 <p>中国大陆网络可能有点慢或受限，建议使用 VPN 或者加速器解决</p>
 </div>
-<h3 id="git_2">配置 Git 用户信息</h3>
+<h3 id="git_1">配置 Git 用户信息</h3>
 <p>打开命令行终端，执行以下命令配置</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"你的Github用户名"</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"你的Github注册邮箱"</span>
@@ -2170,17 +2147,21 @@
 <p>新建一个目录，比如<code>D:/lab512</code>，在该目录下右键空白处，选择 <strong>“使用终端打开”</strong>（或者在VS Code中直接打开该目录），执行以下命令初始化我们的文档项目：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/gailunzhou/512Docs
 </code></pre></div>
-<p>执行完成后，<code>D:/lab512</code> 目录下会多出一个 <code>512Docs</code> 目录。使用VSCode打开这个目录（或者进入这个目录下执行 <code>code .</code> 命令），接下来就可以愉快地编写文档啦！</p>
+<p>执行完成后，<code>D:/lab512</code> 目录下会多出一个 <code>512Docs</code> 目录。</p>
+<p>进入这个目录，用pip安装mkdocs和本地的插件</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</code></pre></div>
+<p>使用VSCode打开这个目录（或者在这个目录下执行 <code>code .</code> 命令），接下来就可以愉快地编写文档啦！</p>
 <h3 id="_3">本地预览</h3>
 <p>在 VSCode 页面，按下 <kbd>Ctrl</kbd> + <kbd>`</kbd> 打开终端，执行以下命令启动本地预览服务器：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdocs<span class="w"> </span>serve
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mkdocs<span class="w"> </span>serve
 </code></pre></div>
 <p>等待运行成功后，应该会看到类似如下的输出：
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2025-11-8-createweb/useserve03.png" data-desc-position="bottom"><img alt="useserve03" src="../images/2025-11-8-createweb/useserve03.png"></a></p>
 <p>直接用鼠标点击这个<strong>url</strong> (http://127.0.0.1:xxxx) 或者复制到浏览器打开，就可以看到本地预览的文档网站惹 :moon:</p>
 <h3 id="markdown">纯Markdown预览</h3>
 <p>点击工作区右上角的 <strong>“打开预览”</strong> 图标，或者按下 <kbd>Ctrl</kbd> + <kbd>K</kbd> 然后再按 <kbd>V</kbd>，即可在侧边打开 Markdown 文件的预览窗口。</p>
-<h2 id="git_3">Git 操作</h2>
+<h2 id="git_2">Git 操作</h2>
 <h3 id="_4">新手教程</h3>
 <p>推荐如下教程：</p>
 <ul>
@@ -2205,7 +2186,36 @@
 <li><strong>Commit</strong> 你的修改（可以多次提交，用了 Git 的暂存区功能，命令行里是 <code>git add</code>）</li>
 <li><strong>Push</strong> 提交到远程仓库</li>
 </ol>
-<p>以上步骤缺一不可，如果你觉得每次手动pull麻烦，可以在 VSCode 里设置自动同步。详细可以看这个<a href="https://github.com/gailunzhou/512Docs/issues/1">Issue</a></p>
+<pre class="mermaid"><code>graph LR
+    P[Pull] --&gt; M[修改] --&gt; A[Add] --&gt; C[Commit] --&gt; P2{Push} --&gt; F[完成]
+    C --&gt; R{更多修改?}
+    R -- 是 --&gt; A
+    P2 -- 冲突 --&gt; S[解决] --&gt; P3[重新Pull] --&gt; F2[重新Add] --&gt; F3[重新Commit] --&gt; P2</code></pre>
+<p>对应的bash命令如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 1. 开始工作前拉取最新代码</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># 2. 进行本地修改...</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># 3. 将修改添加到暂存区</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>git<span class="w"> </span>add<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># 或添加所有修改</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="c1"># 4. 提交到本地仓库</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"描述你的修改"</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="c1"># 5. 推送修改到远程仓库</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="c1"># 6. 如果遇到冲突...</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main<span class="w">  </span><span class="c1"># 拉取最新代码</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="c1"># 手动解决冲突后</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"解决冲突"</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<p>以上步骤缺一不可，用VSCode自带的版本控制图形化工具会方便很多，如果你觉得每次手动pull麻烦，可以在 VSCode 里设置自动同步。详细可以看这个<a href="https://github.com/gailunzhou/512Docs/issues/1">Issue</a></p>
 <h3 id="_6">第一次提交</h3>
 <div class="admonition tip">
 <p>建议先自己创建一个新的仓库，然后随便写点东西提交上去练练手，熟悉流程后再操作正式仓库。</p>
@@ -2213,7 +2223,9 @@
 <p>做好更改后，直接在左侧的源代码管理面板（快捷键 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd>）里，对更改好的文件选择 <code>+</code>号按钮提交更改。</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/git_add.png" data-desc-position="bottom"><img alt="images/git_add.png" src="../images/git_add.png"></a></p>
 <p>然后再输入提交信息（信息可以简单描述你做了什么更改，具体规范可以参考<a href="https://codeewander.github.io/docs/git-commit">Git commit 提交规范</a>），点击 <code>✓</code> 号按钮提交。</p>
-<p>提交完成后按钮会变成 <code>同步更改</code> 按钮，点击它就可以把你的更改推送到远程仓库了喵，如果有冲突的话，Git 会提示你解决冲突，这部分内容在教程视频里有讲到。</p>
+<p>提交完成后按钮会变成 <code>同步更改</code> 按钮，
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/sync_commit.png" data-desc-position="bottom"><img alt="" src="../images/sync_commit.png"></a></p>
+<p>点击它就可以把你的更改推送到远程仓库了喵，如果有冲突的话，Git 会提示你解决冲突，这部分内容在教程视频里有讲到。</p>
 
 
 
