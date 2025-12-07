@@ -347,6 +347,10 @@ Serial.println(input);
 
 可以先把D和I都给0，调P，P调好了以后再调D然后再调I
 
+!!! warning ""
+    代码中的ko不用管
+
+
 调试步骤:
 
 1. 更改参数值，上传到Arduino中
