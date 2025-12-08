@@ -307,6 +307,9 @@ def add(a, b):
                 <li><span class="item folder-icon">hardware/</span>
                     <span class="comment"># 硬件文档 </span>
                 </li>
+                <li><span class="item folder-icon">secret-files/</span>
+                    <span class="comment"># 敏感文件存放目录 </span>
+                </li>                
                 <li><span class="item folder-icon">.../</span>
                     <span class="comment"># 更多模块 </span>
                 </li>                
