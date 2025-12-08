@@ -5,12 +5,15 @@ title: Changelog
 
 ## SleepFox
 
-### 2025-11
-- [ ] 设计 & 调整文档目录结构并编写格式规范
-- [ ] 完成 repo 中针对其他 branch 的 CI/CD 部分编写
-- [ ] 完成 repo 中 CI Test 部分的编写
+### 2025-12
 - [ ] 重新编写所有基础指南文档
 
+### 2025-11
+- [x] 设计 & 调整文档目录结构并编写格式规范
+
+- [ ] <del>完成 repo 中针对其他 branch 的 CI/CD 部分编写</del>
+
+- [x] 完成 repo 中 CI Test 部分的编写 [Link](https://github.com/gailunzhou/512Docs/blob/main/.github/workflows/main.yml)
 - [x] 完成 git-crypt 加密配置并编写[相关文档](basic/secret-note.md)
 - [x] 完成 Repo 的 README 编写
 - [x] 完成 Github Actions 自动部署配置
