@@ -1123,6 +1123,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文件上传
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文件上传">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 树莓派端工作空间创建
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 上传
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1861,6 +1900,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文件上传
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="文件上传">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 树莓派端工作空间创建
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 上传
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1902,7 +1980,11 @@
 
 <h1 id="_1">功能包的上传</h1>
 <div class="admonition tip">
-<p>个人推荐使用FileZilla软件进行上传</p>
+<p class="admonition-title">tips</p>
+<ul>
+<li>个人推荐使用FileZilla软件进行上传</li>
+<li>所有指令的输入不需要全部敲，只用输入前几个字母再按Tab就会自动补齐或列出可选项</li>
+</ul>
 </div>
 <h2 id="1-ros_arduino_bridge">1. ros_arduino_bridge功能包的上传</h2>
 <div class="admonition note">
@@ -1913,6 +1995,108 @@
 <p>内部有两个子文件夹，上面的是当时用TB6612时用的</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rab2.png" data-desc-position="bottom"><img alt="rab2" src="../images/rab2.png"></a></p>
 <h3 id="11-ros_arduino_bridge">1.1 修改ros_arduino_bridge中的配置项</h3>
+<p>配置项文件位置:</p>
+<p>ros_arduino_bridge_Python3 -&gt; ros_arduino_python -&gt; config -&gt; my_arduino_params.yaml</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rab3.png" data-desc-position="bottom"><img alt="rab3" src="../images/rab3.png"></a></p>
+<div class="admonition note">
+<p class="admonition-title">参数解释</p>
+<p>图中画框的部分</p>
+<ul>
+<li>第一个框中为：<ul>
+<li>接口名称</li>
+<li>波特率</li>
+<li>超时时间</li>
+</ul>
+</li>
+<li>第二个框中为：<ul>
+<li>是否使用基座控制器（默认为False，改为True）</li>
+<li>发布频率</li>
+</ul>
+</li>
+<li>第三个框中为：<ul>
+<li>轮胎的直径（单位：m）</li>
+<li>两个轮胎的轮间距（单位：m）</li>
+<li>编码器精度（一圈的脉冲数<em>倍频</em>减速比）</li>
+</ul>
+</li>
+<li>第四个框中为：<ul>
+<li>P</li>
+<li>D</li>
+<li>I</li>
+</ul>
+</li>
+</ul>
+<p>（这里改成在Arduino端的diff_controller.h中调好的PID参数）</p>
+</div>
+<p>改完后保存</p>
+<p>树莓派端启动的主要是ros_arduino_python中的arduino.launch文件</p>
+<p>里面主要运行的是arduino_node.py</p>
+<h2 id="_2">文件上传</h2>
+<h3 id="21">2.1 树莓派端工作空间创建</h3>
+<p>图为使用MobaXterm远程SSH</p>
+<p>工作空间其实就是文件夹，创建指令为
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>文件夹名
+</code></pre></div><p></p>
+<p>可拓展创建子文件夹
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>文件夹名/子文件夹名
+</code></pre></div><p></p>
+<p>这里以<code>catkin_ws</code>为例，工作空间必须需要一个名为<code>src</code>的子文件夹</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rab4.png" data-desc-position="bottom"><img alt="rab4" src="../images/rab4.png"></a></p>
+<p>创建完成后进入工作空间的根目录编译一下</p>
+<p>编译指令
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>catkin_make
+</code></pre></div><p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rab5.png" data-desc-position="bottom"><img alt="rab5" src="../images/rab5.png"></a></p>
+<div class="admonition note">
+<p class="admonition-title">图中个别指令解释</p>
+<ul>
+<li>ls<ul>
+<li>列出当前文件夹内的所有文件</li>
+</ul>
+</li>
+<li>cd<ul>
+<li>跳转到目标位置内，即cd后的文件夹位置内</li>
+</ul>
+</li>
+</ul>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rab6.png" data-desc-position="bottom"><img alt="rab6" src="../images/rab6.png"></a></p>
+<p>编译完成</p>
+<h3 id="22">2.2 上传</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rab7.png" data-desc-position="bottom"><img alt="rab7" src="../images/rab7.png"></a></p>
+<div class="admonition note">
+<p class="admonition-title">图中个别指令解释</p>
+<ul>
+<li>图中最上面是树莓派端的ip，用户名，密码</li>
+<li>端口写22点击快速连接进入创建的工作空间中的src/目录（功能包应该在src目录下）</li>
+<li>电脑这边选中整个功能包：ros_arduino_bridge_Python3右键选择上传</li>
+</ul>
+</div>
+<p>上传完成后回到工作空间根目录再编译一次</p>
+<div class="admonition warning">
+<p class="admonition-title">特别注意！</p>
+<p>编译一定要在工作空间根目录下进行</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rab8.png" data-desc-position="bottom"><img alt="rab8" src="../images/rab8.png"></a></p>
+<div class="admonition note">
+<p class="admonition-title">图中个别指令解释</p>
+<ul>
+<li>cd ..<ul>
+<li>跳转到上一级目录</li>
+</ul>
+</li>
+</ul>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/rab9.png" data-desc-position="bottom"><img alt="rab9" src="../images/rab9.png"></a></p>
+<p>编译不报错即可</p>
+<p>然后
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>src
+</code></pre></div><p></p>
+<p>跳转到src文件夹下执行
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">777</span><span class="w"> </span>ros_arduino_bridge_Python3
+</code></pre></div><p></p>
+<p>意思是给ros_arduino_bridge_Python3功能包中所有文件添加可执行权限</p>
+<p>不报错即可</p>
 
 
 
