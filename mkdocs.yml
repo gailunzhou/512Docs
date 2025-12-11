@@ -106,6 +106,7 @@ nav:
       - Ubuntu系统安装ROS: software/ROS/2025-12-3-ROS1-Ubuntu20.04安装ROS.md
       - 底盘控制-Arduino部分: software/ROS/2025-12-4-ROS1-Arduino部分.md
       - 功能包上传至树莓派: software/ROS/2025-12-9-ros_arduino_bridge上传.md
+      - 雷达使用注意事项: software/ROS/2025-12-11-雷达使用注意事项.md
     - Unity引擎: software/unity/2025-11-9-Unity引擎.md
     - 远程连接: software/远程连接/2025-12-6-远程连接&使用电脑.md
 
