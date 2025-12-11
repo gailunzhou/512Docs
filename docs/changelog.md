@@ -32,8 +32,8 @@ title: Changelog
     - [x] 树莓派安装Ubuntu20.04
     - [x] Ubuntu20.04安装ROS
     - [x] Arduino部分
-    - [ ] ros_arduino_bridge上传
-    - [ ] 雷达使用的注意事项
+    - [x] ros_arduino_bridge上传
+    - [x] 雷达使用的注意事项
     - [ ] 进行SLAM雷达建图的准备工作
     - [ ] Gmapping建图
     - [ ] 地图保存与地图服务
