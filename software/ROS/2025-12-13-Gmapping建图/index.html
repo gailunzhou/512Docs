@@ -80,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#gmapping" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1121,6 +1126,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gmapping建图
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1138,6 +1163,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 安装相关功能包
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 创建建图功能包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 创建建图功能包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1836,6 +1941,77 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 安装相关功能包
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 创建建图功能包
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 创建建图功能包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1868,9 +2044,245 @@
   
 
 
-  <h1>Gmapping建图</h1>
+<div class="article-meta" style="background: #f0f8ff; padding: 15px; border-left: 4px solid #2196f3; margin-bottom: 20px; border-radius: 4px;">
+  <p style="margin: 0; color: #666; font-size: 0.9em;">
+    <strong>📅 发布日期:</strong> 2025-12-13 &nbsp;|&nbsp; <strong>👤 作者:</strong> CCChiJi &nbsp;|&nbsp; <strong>📁 分类:</strong> 软件 &nbsp;|&nbsp; <strong>🏷️ 标签:</strong> ROS
+  </p>
+</div>
 
-
+<h1 id="gmapping">Gmapping建图</h1>
+<p>完成建图前的准备工作后（机器人启动、机器人部件的坐标变换、rviz的添加），就可以开始使用gmapping建图了</p>
+<h2 id="1">1. 安装相关功能包</h2>
+<p>建图前还需要安装几个功能包，使用以下指令安装：<br>
+安装 gmapping 包(用于构建地图)
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-&lt;ROS版本&gt;-gmapping
+</code></pre></div><p></p>
+<p>安装地图服务包(用于保存与读取地图)
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-&lt;ROS版本&gt;-map-server
+</code></pre></div><p></p>
+<p>安装 navigation 包(用于定位以及路径规划)
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-&lt;ROS版本&gt;-navigation
+</code></pre></div><p></p>
+<p>不同Ubuntu版本和ROS版本的对应关系参考下表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ROS版本</th>
+<th style="text-align: left;">Ubuntu版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ROS 1 Indigo</td>
+<td style="text-align: left;">14.04 (Trusty)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 1 Jade</td>
+<td style="text-align: left;">15.04 (Vivid)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 1 Kinetic</td>
+<td style="text-align: left;">16.04 (Xenial)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 1 Lunar</td>
+<td style="text-align: left;">17.04 (Zesty)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 1 Melodic</td>
+<td style="text-align: left;">18.04 (Bionic)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 1 Noetic</td>
+<td style="text-align: left;">20.04 (Focal)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 2 Ardent</td>
+<td style="text-align: left;">16.04 (Xenial)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 2 Bouncy</td>
+<td style="text-align: left;">18.04 (Bionic)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 2 Crystal</td>
+<td style="text-align: left;">18.04 (Bionic)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 2 Dashing</td>
+<td style="text-align: left;">18.04 (Bionic)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 2 Eloquent</td>
+<td style="text-align: left;">18.04 (Bionic)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 2 Foxy</td>
+<td style="text-align: left;">20.04 (Focal)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 2 Galactic</td>
+<td style="text-align: left;">20.04 (Focal)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 2 Humble</td>
+<td style="text-align: left;">22.04 (Jammy)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 2 Iron</td>
+<td style="text-align: left;">22.04 (Jammy)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 2 Jazzy</td>
+<td style="text-align: left;">24.04 (Noble)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ROS 2 Kilted</td>
+<td style="text-align: left;">24.04 (Noble)</td>
+</tr>
+</tbody>
+</table>
+<p>我用的是20.04，因此是
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-Focal-gmapping
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-Focal-map-server
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-Focal-navigation
+</code></pre></div><p></p>
+<h2 id="2">2. 创建建图功能包</h2>
+<h3 id="21">2.1</h3>
+<div class="admonition note">
+<p class="admonition-title">前情提要</p>
+<ul>
+<li>功能包的创建在 <strong>建图前的准备工作</strong> 章节中有讲，这里就不重复</li>
+<li>功能包创建指令:<ul>
+<li><code>catkin_create_pkg</code>创建功能包，其后必要的参数为：</li>
+<li>功能包名 </li>
+<li>所需要的依赖 </li>
+</ul>
+</li>
+</ul>
+</div>
+<p>参考下图创建建图功能包:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/map1.png" data-desc-position="bottom"><img alt="map1" src="../images/map1.png"></a></p>
+<div class="admonition note">
+<p class="admonition-title">说明</p>
+<p>创建功能包的指令和位置之前讲过不再赘述，这次需要包含的除了roscpp那些以外还需要包含gmapping、map_server、amcl、move_base和之前创建的start_car(自己创建的启动功能包)</p>
+</div>
+<h3 id="22">2.2</h3>
+<p>在创建的功能包中创建launch文件夹并创建launch文件</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/map2.png" data-desc-position="bottom"><img alt="map2" src="../images/map2.png"></a></p>
+<p><code>gmap_test.launch</code>中按如下图编写（建议直接复制），其中<code>gmap_test</code>是文件名称，自定义即可</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/map3.png" data-desc-position="bottom"><img alt="map3" src="../images/map3.png"></a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;launch&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="cm">&lt;!--把雷达坐标系换成一个变量，可随时更换 --&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name =</span><span class="w"> </span><span class="s">"scan_topic"</span><span class="w"> </span><span class="na">default =</span><span class="w"> </span><span class="s">"scan"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">&lt;node</span><span class="w"> </span><span class="na">pkg=</span><span class="s">"gmapping"</span><span class="w"> </span><span class="na">type=</span><span class="s">"slam_gmapping"</span><span class="w"> </span><span class="na">name=</span><span class="s">"slam_gmapping"</span><span class="w"> </span><span class="na">output=</span><span class="s">"screen"</span><span class="nt">&gt;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">      </span><span class="nt">&lt;remap</span><span class="w"> </span><span class="na">from=</span><span class="s">"scan"</span><span class="w"> </span><span class="na">to=</span><span class="s">"$(arg scan_topic)"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"base_frame"</span><span class="w"> </span><span class="na">value=</span><span class="s">"base_footprint"</span><span class="nt">/&gt;</span><span class="cm">&lt;!--底盘坐标系--&gt;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"odom_frame"</span><span class="w"> </span><span class="na">value=</span><span class="s">"odom"</span><span class="nt">/&gt;</span><span class="w"> </span><span class="cm">&lt;!--里程计坐标系--&gt;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"map_update_interval"</span><span class="w"> </span><span class="na">value=</span><span class="s">"5.0"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"maxUrange"</span><span class="w"> </span><span class="na">value=</span><span class="s">"16.0"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"sigma"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.05"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"kernelSize"</span><span class="w"> </span><span class="na">value=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"lstep"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.05"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"astep"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.05"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"iterations"</span><span class="w"> </span><span class="na">value=</span><span class="s">"5"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"lsigma"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.075"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"ogain"</span><span class="w"> </span><span class="na">value=</span><span class="s">"3.0"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"lskip"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"srr"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.1"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"srt"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.2"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"str"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.1"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"stt"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.2"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"linearUpdate"</span><span class="w"> </span><span class="na">value=</span><span class="s">"1.0"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"angularUpdate"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.5"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"temporalUpdate"</span><span class="w"> </span><span class="na">value=</span><span class="s">"3.0"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"resampleThreshold"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.5"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"particles"</span><span class="w"> </span><span class="na">value=</span><span class="s">"30"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"xmin"</span><span class="w"> </span><span class="na">value=</span><span class="s">"-50.0"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"ymin"</span><span class="w"> </span><span class="na">value=</span><span class="s">"-50.0"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"xmax"</span><span class="w"> </span><span class="na">value=</span><span class="s">"50.0"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"ymax"</span><span class="w"> </span><span class="na">value=</span><span class="s">"50.0"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"delta"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.05"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"llsamplerange"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.01"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"llsamplestep"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.01"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"lasamplerange"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.005"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">      </span><span class="nt">&lt;param</span><span class="w"> </span><span class="na">name=</span><span class="s">"lasamplestep"</span><span class="w"> </span><span class="na">value=</span><span class="s">"0.005"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">    </span><span class="nt">&lt;/node&gt;</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">    </span><span class="cm">&lt;!-- 添加启动文件  --&gt;</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="w">    </span><span class="nt">&lt;include</span><span class="w"> </span><span class="na">file=</span><span class="s">"$(find start_car)/launch/start_tf.launch"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="nt">&lt;/launch&gt;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">说明</p>
+<ul>
+<li>第一句:<ul>
+<li><code>pkg="gmapping"</code>：指定节点所属的功能包为gmapping。</li>
+<li><code>type="slam_gmapping"</code>：指定要运行的可执行文件名称，即gmapping的核心 SLAM 程序。</li>
+<li><code>name="slam_gmapping"</code>：设置节点的名称，在 ROS 网络中唯一标识该节点。</li>
+<li><code>output="screen"</code>：将节点的日志信息输出到终端（屏幕），方便调试。</li>
+</ul>
+</li>
+<li>第二句:<ul>
+<li><code>from="scan"</code>：节点默认订阅的激光雷达话题名称为scan。</li>
+<li><code>to="$(arg scan_topic)"</code>：将默认话题重映射到外部传入的参数scan_topic，提高配置灵活性（比如激光雷达实际话题是<code>/lidar/scan</code>时，可通过参数指定）</li>
+</ul>
+</li>
+<li>参数说明:<ul>
+<li><code>param name="base_frame" value="base_footprint"</code>：机器人底盘坐标系，作为激光雷达、里程计的参考基座，通常位于机器人轮轴中心。</li>
+<li><code>param name="odom_frame" value="odom"</code>：里程计坐标系，用于提供机器人的运动估计，odom到base_footprint的变换由里程计发布。</li>
+<li><code>param name="map_update_interval" value="5.0"</code>：地图的更新周期，单位秒（s）。每隔 5 秒才会根据粒子滤波结果更新一次栅格地图，避免高频更新占用资源。</li>
+<li><code>param name="maxUrange" value="16.0"</code>：激光雷达的有效最大测距范围，单位米（m）。超过 16m 的激光数据会被忽略（防止无效远距噪声干扰）。</li>
+<li><code>param name="sigma" value="0.05"</code>：激光数据的噪声标准差，单位米（m）。用于描述激光测量值的不确定性，数值越大表示激光噪声越高。</li>
+<li><code>param name="kernelSize" value="1"</code>：似然场计算的核函数大小，一般设为 1 即可，无需调整。</li>
+<li><code>param name="lstep" value="0.05"</code>：粒子位姿搜索的线性步长，单位米（m）。每次迭代粒子沿 x/y 方向移动的步长，步长越小精度越高但速度越慢。</li>
+<li><code>param name="astep" value="0.05"</code>：粒子位姿搜索的角度步长，单位弧度（rad）。每次迭代粒子旋转的步长。</li>
+<li><code>param name="iterations" value="5"</code>：粒子位姿优化的迭代次数。次数越多，粒子位姿越精准，但计算量越大。</li>
+<li><code>param name="lsigma" value="0.075"</code>：似然场的标准差，用于衡量激光数据与地图的匹配程度。</li>
+<li><code>param name="ogain" value="3.0"</code>：似然场的增益系数，放大匹配得分的权重，提高匹配的灵敏度。</li>
+<li><code>param name="lskip" value="0"</code>：激光数据的下采样间隔。设为 0 表示使用所有激光点；设为 n 表示每 n 个点取 1 个，降低计算量。</li>
+<li><code>param name="srr" value="0.1"</code>：旋转运动导致的旋转噪声系数。</li>
+<li><code>param name="srt" value="0.2"</code>：旋转运动导致的平移噪声系数。</li>
+<li><code>param name="str" value="0.1"</code>：平移运动导致的旋转噪声系数。</li>
+<li><code>param name="stt" value="0.2"</code>：平移运动导致的平移噪声系数。</li>
+<li><code>param name="linearUpdate" value="1.0"</code>：线性运动更新阈值，单位米（m）。机器人平移距离超过 1m 时，触发粒子更新。</li>
+<li><code>param name="angularUpdate" value="0.5"</code>：角度运动更新阈值，单位弧度（rad）。机器人旋转角度超过 0.5rad（约 28.6°）时，触发粒子更新。</li>
+<li><code>param name="temporalUpdate" value="3.0"</code>：强制更新时间阈值，单位秒（s）。即使机器人运动未达阈值，每隔 3 秒也会强制更新一次粒子。</li>
+<li><code>param name="resampleThreshold" value="0.5"</code>：重采样阈值。当粒子集的有效粒子数占比低于 0.5 时，触发重采样。</li>
+<li><code>param name="particles" value="30"</code>：粒子数量。粒子越多，位姿估计越精准，但计算量呈线性增长（小场景建议 30-50，大场景可增至 100）。</li>
+<li><code>param name="xmin" value="-50.0"</code>：地图x 轴方向的最小 / 最大值，单位米（m）。初始地图在 x 轴范围是 - 50m 到 50m。</li>
+<li><code>param name="ymin" value="-50.0"</code>：地图y 轴方向的最小 / 最大值，单位米（m）。初始地图在 y 轴范围是 - 50m 到 50m。</li>
+<li><code>param name="xmax" value="50.0"</code>：地图x 轴方向的最小 / 最大值，单位米（m）。初始地图在 x 轴范围是 - 50m 到 50m。</li>
+<li><code>param name="ymax" value="50.0"</code>：地图y 轴方向的最小 / 最大值，单位米（m）。初始地图在 y 轴范围是 - 50m 到 50m。</li>
+<li><code>param name="delta" value="0.05"</code>：地图栅格分辨率，单位米（m）。每个栅格边长为 0.05m，数值越小地图越精细，但内存占用越大。</li>
+<li><code>param name="llsamplerange" value="0.01"</code>：似然场线性采样范围，单位米（m）。</li>
+<li><code>param name="llsamplestep" value="0.01"</code>：似然场线性采样步长，单位米（m）。</li>
+<li><code>param name="lasamplerange" value="0.005"</code>：似然场角度采样范围，单位弧度（rad）。</li>
+<li><code>param name="lasamplestep" value="0.005"</code>：似然场角度采样步长，单位弧度（rad）。</li>
+</ul>
+</li>
+<li><strong>提示：采样步长越小，匹配精度越高，但计算耗时越长。</strong></li>
+</ul>
+</div>
+<p>保存退出后<br>
+cd到工作空间的根目录下编译一次</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/map4.png" data-desc-position="bottom"><img alt="map4" src="../images/map4.png"></a></p>
+<p>编译不报错的话就可以直接roslaunch运行该launch文件了</p>
+<h3 id="23">2.3</h3>
+<ol>
+<li>cd到工作空间根目录</li>
+<li>先source ./devel/setup.bash</li>
+<li>再roslaunch nav_test gmap_test.launch</li>
+<li>在rviz中添加map，TF，laserscan组件，将<code>Fixed Frame</code>修改为<code>map</code>完成后如下图</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">tips</p>
+<p>如果没有启动<code>roscore</code>也是可以的，因为<code>roslaunch</code>会检查当前是否有<code>roscore</code>，没有就会自动启动<code>roscore</code></p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/map5.png" data-desc-position="bottom"><img alt="map5" src="../images/map5.png"></a></p>
 
 
 
