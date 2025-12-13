@@ -34,7 +34,7 @@ title: Changelog
     - [x] Arduino部分
     - [x] ros_arduino_bridge上传
     - [x] 雷达使用的注意事项
-    - [ ] 进行SLAM雷达建图的准备工作
+    - [x] 进行SLAM雷达建图的准备工作
     - [ ] Gmapping建图
     - [ ] 地图保存与地图服务
     - [ ] amcl定位

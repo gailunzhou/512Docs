@@ -108,6 +108,7 @@ nav:
       - 功能包上传至树莓派: software/ROS/2025-12-9-ros_arduino_bridge上传.md
       - 雷达使用注意事项: software/ROS/2025-12-11-雷达使用注意事项.md
       - 建图前的准备工作: software/ROS/2025-12-13-建图前的准备工作.md
+      - Gmapping建图: software/ROS/2025-12-13-Gmapping建图.md
     - Unity引擎: software/unity/2025-11-9-Unity引擎.md
     - 远程连接: software/远程连接/2025-12-6-远程连接&使用电脑.md
 
