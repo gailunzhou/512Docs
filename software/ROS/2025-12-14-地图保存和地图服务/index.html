@@ -80,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1149,6 +1154,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    地图保存&amp;服务
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1166,6 +1191,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 地图保存实现
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 地图保存实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 创建存储地图的文件夹
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-launch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 地图保存launch文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 地图服务实现
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 地图服务实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-launch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 地图服务launch文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1864,6 +1975,83 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 地图保存实现
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 地图保存实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 创建存储地图的文件夹
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-launch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 地图保存launch文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 地图服务实现
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 地图服务实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-launch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 地图服务launch文件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1896,9 +2084,90 @@
   
 
 
-  <h1>地图保存&amp;服务</h1>
+<div class="article-meta" style="background: #f0f8ff; padding: 15px; border-left: 4px solid #2196f3; margin-bottom: 20px; border-radius: 4px;">
+  <p style="margin: 0; color: #666; font-size: 0.9em;">
+    <strong>📅 发布日期:</strong> 2025-12-14 &nbsp;|&nbsp; <strong>👤 作者:</strong> CCChiJi &nbsp;|&nbsp; <strong>📁 分类:</strong> 软件 &nbsp;|&nbsp; <strong>🏷️ 标签:</strong> ROS
+  </p>
+</div>
 
-
+<h1 id="_1">地图保存与地图服务</h1>
+<p>导航工作需要使用到建好的地图，因此需要把建图的地图进行保存，并可服务于导航的使用</p>
+<h2 id="1">1. 地图保存实现</h2>
+<div class="admonition note">
+<p class="admonition-title">前提条件</p>
+<p>需要有Map话题的发布，因此可以在保持开启gmapping建图时使用地图保存。</p>
+</div>
+<h3 id="11">1.1 创建存储地图的文件夹</h3>
+<p>在nav_test文件夹下创建map文件夹用来保存地图</p>
+<p><em>nav_test是上一章节 </em><strong>Gmapping建图</strong><em> 中创建的功能包，有关导航的所有文件都存放在该功能包中</em></p>
+<p><code>cd</code>到nav_test(你创建的导航功能包)中后输入:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>map
+</code></pre></div><p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/map.png" data-desc-position="bottom"><img alt="map" src="../images/map.png"></a></p>
+<h3 id="12-launch">1.2 地图保存launch文件</h3>
+<p>在导航功能包的launch目录下新建文件：map_save.launch</p>
+<p><code>cd</code>到launch目录下后输入指令:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>vi<span class="w"> </span>map_save.launch
+</code></pre></div><p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/map_save.png" data-desc-position="bottom"><img alt="map_save" src="../images/map_save.png"></a></p>
+<p>可直接复制
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;launch&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="cm">&lt;!-- 将保存路径作为参数，方便更改 --&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">"filename"</span><span class="w"> </span><span class="na">value=</span><span class="s">"$(find nav_test)/map/mymap"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="cm">&lt;!-- 地图服务节点 --&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&lt;node</span><span class="w"> </span><span class="na">name=</span><span class="s">"map_save"</span><span class="w"> </span><span class="na">pkg=</span><span class="s">"map_server"</span><span class="w"> </span><span class="na">type=</span><span class="s">"map_saver"</span><span class="w"> </span><span class="na">args=</span><span class="s">"-f $(arg filename)"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nt">&lt;/launch&gt;</span>
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">说明</p>
+<ul>
+<li>注意这里的第二句末尾<code>args="-f $(arg filename)"</code>这里就指定了保存的路径和文件名称</li>
+<li>第一句就是指定的保存路径和文件名称</li>
+<li>路径：nav_test/map（可自定义）</li>
+<li>名称：mymap（可自定义）</li>
+</ul>
+</div>
+<p>保存退出后可以在工作空间的根目录下<code>catkin_make</code>编译一下</p>
+<p>当gmapping在运行时，新开终端运行<code>map_save.launch</code>就可以保存地图到map文件夹中，并以mymap（可自定义）命名</p>
+<ol>
+<li>运行建图</li>
+<li>新开终端</li>
+<li><code>cd</code>到工作空间</li>
+<li><code>source ./devel/setup.bash</code>刷新环境变量</li>
+<li><code>roslaunch nav_test map_save.launch</code></li>
+<li>到map文件夹中查看是否有保存的地图</li>
+</ol>
+<h2 id="2">2. 地图服务实现</h2>
+<p>在已有地图的情况下，使用地图服务可以查看地图</p>
+<h3 id="21-launch">2.1 地图服务launch文件</h3>
+<p>在nav_test的launch文件夹中新建map_server.launch:
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>vi<span class="w"> </span>map_server.launch
+</code></pre></div><p></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/mapserver.png" data-desc-position="bottom"><img alt="mapserve" src="../images/mapserver.png"></a></p>
+<p>可直接复制
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;launch&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="cm">&lt;!-- 设置地图来源 --&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&lt;arg</span><span class="w"> </span><span class="na">name=</span><span class="s">"map"</span><span class="w"> </span><span class="na">default=</span><span class="s">"mymap.yaml"</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="cm">&lt;!-- 运行地图服务器，并且加载设置的地图--&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">&lt;node</span><span class="w"> </span><span class="na">name=</span><span class="s">"map_server"</span><span class="w"> </span><span class="na">pkg=</span><span class="s">"map_server"</span><span class="w"> </span><span class="na">type=</span><span class="s">"map_server"</span><span class="w"> </span><span class="na">args=</span><span class="s">"$(find nav_test)/map/$(arg map)"</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nt">&lt;/launch&gt;</span>
+</code></pre></div><p></p>
+<div class="admonition note">
+<p class="admonition-title">说明</p>
+<p>这个launch文件会加载名称为map的ymal文件，默认加载mymap.ymal的文件，
+名称是可以自定义的，但是要确保default后面的文件的确存在，否则无法加载地图</p>
+</div>
+<p>保存退出后可以在工作空间的根目录下<code>catkin_make</code>编译一下</p>
+<p>运行这个文件时不需要运行建图，运行这个文件后可以手动开启rviz（也可以在launch文件中添加<code>&lt;node pkg = “rviz”...  /&gt;</code>来一起启动）添加by topic中的map组件会显示保存的地图</p>
+<ol>
+<li><code>cd</code>到工作空间根目录</li>
+<li><code>source ./devel/setup.bash</code>刷新环境变量</li>
+<li><code>roslaunch nav_test map_server.launch</code></li>
+<li>输入<code>rviz</code>打开rviz</li>
+<li>添加<code>map</code>组件</li>
+</ol>
+<p>正常会显示你之前建图所保存的地图
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/mapserver2.png" data-desc-position="bottom"><img alt="mapserver2" src="../images/mapserver2.png"></a></p>
 
 
 
