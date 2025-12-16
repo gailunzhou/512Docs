@@ -37,7 +37,7 @@ title: Changelog
     - [x] 进行SLAM雷达建图的准备工作
     - [x] Gmapping建图
     - [x] 地图保存与地图服务
-    - [ ] amcl定位
+    - [x] amcl定位
     - [ ] 路径规划
     - [ ] 自主导航式建图
 
