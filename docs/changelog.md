@@ -28,7 +28,7 @@ title: Changelog
 
 ### 2025-12
 
-- [ ] ROS1部分内容
+- [x] ROS1部分内容
     - [x] 树莓派安装Ubuntu20.04
     - [x] Ubuntu20.04安装ROS
     - [x] Arduino部分
@@ -39,6 +39,6 @@ title: Changelog
     - [x] 地图保存与地图服务
     - [x] amcl定位
     - [x] 路径规划
-    - [ ] 自主导航式建图
+    - [x] 自主导航式建图
 
 - [x] 远程连接&使用电脑

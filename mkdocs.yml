@@ -112,6 +112,7 @@ nav:
       - 地图保存&服务: software/ROS/2025-12-14-地图保存和地图服务.md
       - amcl定位: software/ROS/2025-12-14-amcl定位.md
       - 路径规划: software/ROS/2025-12-16-路径规划.md
+      - 自主导航: software/ROS/2025-12-21-自主导航.md
     - Unity引擎: software/unity/2025-11-9-Unity引擎.md
     - 远程连接: software/远程连接/2025-12-6-远程连接&使用电脑.md
 
