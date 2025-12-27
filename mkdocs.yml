@@ -118,6 +118,8 @@ nav:
 
   - 硬件:
     - Introduction: hardware/index.md
+    - 3D_Print: 
+      - 耗材相关: hardware/3D_Print/2025-12-27-3D打印机换料需知.md
 
   - AI应用:
     - Introduction: ai/index.md
