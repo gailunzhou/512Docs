@@ -276,6 +276,8 @@ mkdocs gh-deploy
 
 在VScode中打开项目并开启终端位于根目录
 
+按照以下顺序进行
+
 ```bash
 git pull
 git add .
@@ -288,3 +290,48 @@ git push
 mkdocs gh-deploy
 ```
 等待几分钟，刷新网站即可看到更新
+
+- 还可以通过Github-Actions来实现自动部署
+
+1. 在项目根目录中创建名为 **.github**的文件夹
+2. 在 **.github**文件夹内创建 **workflow**文件夹
+3. 在 **workflow**文件夹内创建 **deploy.yml**文件，其中 **deploy**是文件名可自定
+
+文件内容参考（可直接复制）:
+```yaml
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 或你使用的默认分支名
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material
+
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
+
+```
+
+保存好后按照上文 **更新内容**的步骤操作一次即可
+
+然后就可以在push之后自动部署好了
