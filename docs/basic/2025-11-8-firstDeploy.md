@@ -277,9 +277,10 @@ mkdocs gh-deploy
 在VScode中打开项目并开启终端位于根目录
 
 ```bash
+git pull
 git add .
 git commit -m "更新XXX/Update XXX"  # 备注修改内容
-git push origin main
+git push
 ```
 - 重新部署到GitHub Pages
 
