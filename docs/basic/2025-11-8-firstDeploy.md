@@ -227,6 +227,8 @@ git init
 git add .
 # 提交文件（备注信息可自定义）
 git commit -m "初始化 MkDocs + Material 项目"
+#创建main分支
+git branch -M main
 # 关联 GitHub 仓库(origin后就是你仓库的地址)
 git remote add origin https://github.com/your-username/my-docs.git
 # 推送到 GitHub 主分支（main 或 master，根据 GitHub 默认分支调整）
