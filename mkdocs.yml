@@ -121,6 +121,8 @@ nav:
     - Introduction: hardware/index.md
     - 3D_Print: 
       - 耗材相关: hardware/3D_Print/2025-12-27-3D打印机换料需知.md
+    - Model:
+      - 建模软件&教程: hardware/Model/2026-3-31-建模工具&教程.md
 
   - AI应用:
     - Introduction: ai/index.md
