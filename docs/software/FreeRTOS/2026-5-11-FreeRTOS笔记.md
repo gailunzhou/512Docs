@@ -46,7 +46,7 @@ FreeRTOS是一个迷你（mini）的**实时操作系统**内核。作为一个�
 
 2. GitHub下载
 
-   Github地址：https://github.com/FreeRTOS/FreeRTOS/releases
+   Github地址:[Github地址](https://github.com/FreeRTOS/FreeRTOS/releases)
 
 ![Github下载](images\Github下载.png)
 
@@ -293,65 +293,65 @@ extern uint32_t FreeRTOSRunTimeTicks;
 
 工程配置中添加如下四个新文件夹，其中`APP`文件夹是实际的业务代码文件
 
-![工程配置1](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\工程配置1.png)
+![工程配置1](images\工程配置1.png)
 
 `FreeRTOS/include`目录中添加所有`FreeRTOS`文件夹下的`include`文件夹所有内容
 
-![include配置](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\include配置.png)
+![include配置](images\include配置.png)
 
 `FreeRTOS/source`目录中添加如下内容，文件来自于`FreeRTOS`文件夹下的`source`文件夹
 
-![source配置](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\source配置.png)
+![source配置](images\source配置.png)
 
 `FreeRTOS/portable`目录中添加如下内容，文件来自于`FreeRTOS`文件夹下的`portable`文件夹
 
-![portable配置](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\portable配置.png)
+![portable配置](images\portable配置.png)
 
 `APP`目录中添加如下内容（主要就是自定义的业务逻辑文件）
 
-![APP配置](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\APP配置.png)
+![APP配置](images\APP配置.png)
 
 以上内容添加好后，为了防止编译时找不到对应的头文件，还需要添加头文件所在的路径
 
 1. 
 
-![添加头文件配置](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\添加头文件配置.png)
+![添加头文件配置](images\添加头文件配置.png)
 
 2. 
 
-![添加头文件配置2](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\添加头文件配置2.png)
+![添加头文件配置2](images\添加头文件配置2.png)
 
 3. 
 
-![头文件配置](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\头文件配置.png)
+![头文件配置](images\头文件配置.png)
 
 #### 3.3.3 编译报错修复
 
 编译一次会有报错，如果前面配置的正常现在应该会是这个错误：
 
-![编译报错1](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\编译报错1.png)
+![编译报错1](images\编译报错1.png)
 
 解决方法：
 
 找到这个stm32f10x_it.c里面三个空函数注释掉
 
-![注释函数1](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\注释函数1.png)
+![注释函数1](images\注释函数1.png)
 
-![注释函数2](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\注释函数2.png)
+![注释函数2](images\注释函数2.png)
 
-![注释函数3](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\注释函数3.png)
+![注释函数3](images\注释函数3.png)
 
 如果出现这些错误：
 
 1. 
 
-![编译报错2](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\编译报错2.png)
+![编译报错2](images\编译报错2.png)
 
 说明没有创建`FreeRTOSConfig.h`文件且没有正确配置头文件路径
 
 2. 
 
-![编译报错3](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\编译报错3.png)
+![编译报错3](images\编译报错3.png)
 
 说明没有将`ARM_CM3`文件夹配置到头文件路径中
 
@@ -361,7 +361,7 @@ extern uint32_t FreeRTOSRunTimeTicks;
 
 把自己的串口相关代码修改一下文件名称即可，例如我这里原来是`Usart1.c`和`Usart1.h`
 
-![报错解决](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\报错解决.png)
+![报错解决](images\报错解决.png)
 
 #### 3.3.4 自定义嘀嗒时钟相关代码
 
