@@ -7,7 +7,7 @@ tags: FreeRTOS
 
 # FreeRTOS
 
-官网：https://freertos.org/
+官网：[FreeRTOS官网](https://freertos.org/)
 
 ## 1. FreeRTOS概述
 
@@ -40,7 +40,7 @@ FreeRTOS是一个迷你（mini）的**实时操作系统**内核。作为一个�
 
 1. 官网下载
 
-![FreeRTOS](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\FreeRTOS.png)
+![FreeRTOS](images\FreeRTOS.png)
 
 当前选择的是202212.01版本
 
@@ -48,7 +48,7 @@ FreeRTOS是一个迷你（mini）的**实时操作系统**内核。作为一个�
 
    Github地址：https://github.com/FreeRTOS/FreeRTOS/releases
 
-![Github下载](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\Github下载.png)
+![Github下载](images\Github下载.png)
 
 ### 3.2 源码结构
 
@@ -114,7 +114,7 @@ RVDS 文件夹包含了各种处理器相关的文件夹，FreeRTOS 是一个软
 
 FreeRTOS 为我们提供了 cortex-m0、m3、m4 和 m7 等内核的单片机的接口文件，根据mcu的内核选择对应的接口文件即可。其实准确来说，不能够叫移植，应该叫使用官方的移植， 因为这些跟硬件相关的接口文件，RTOS 官方都已经写好了，我们只是使用而已。
 
-![RVDS文件夹](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\RVDS文件夹.png)
+![RVDS文件夹](images\RVDS文件夹.png)
 
 以 ARM_CM3 这个文件夹为例，里面只有`port.c`与`portmacro.h` 两个文件
 
@@ -130,7 +130,7 @@ port.c文件对应的头文件，主要是一些数据类型和宏定义。
 
 MemMang 文件夹下存放的是跟内存管理相关的，总共有五个 heap 文件以及一个 readme 说明文件。
 
-![内存管理](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\内存管理.png)
+![内存管理](images\内存管理.png)
 
 这五个 heap 文件在移植的时候必须使用一个，因为 FreeRTOS 在创建内核对象的时候使用的是动态分配内存，而这些动态内存分配的函数则在这几个文件里面实现，不同的分配算法会导致不同的效率与结果，后面在内存管理中我们会讲解每个文件的区别，由于现在是初学，所以我们选用 **heap4.c** 即可。
 
@@ -140,25 +140,25 @@ MemMang 文件夹下存放的是跟内存管理相关的，总共有五个 heap 
 
 在原始例程的根路径下，创建**FreeRTOS**文件夹，并且往里面新建**portable**和**source**文件夹
 
-![新建文件夹](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\新建文件夹.png)
+![新建文件夹](images\新建文件夹.png)
 
 拷贝FreeRTOS源码的Source文件夹的7个.c文件到例程的source文件夹。
 
-![拷贝源文件](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\拷贝源文件.png)
+![拷贝源文件](images\拷贝源文件.png)
 
 拷贝FreeRTOS源码portable文件夹下的Keil、RVDS、MemMang到例程的portable文件夹下。
 
-![拷贝文件夹](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\拷贝文件夹.png)
+![拷贝文件夹](images\拷贝文件夹.png)
 
 **其中例程的MemMang可只保留heap_4.c**
 
 **RVDS文件夹下要保留当前使用芯片所对应的内核（STM32F103就是CM3内核的）**
 
-![保留CM3文件夹](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\保留CM3文件夹.png)
+![保留CM3文件夹](images\保留CM3文件夹.png)
 
 拷贝FreeRTOS源码include文件夹到例程的FreeRTOS文件夹下。
 
-![拷贝头文件](G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\拷贝头文件.png)
+![拷贝头文件](images\拷贝头文件.png)
 
 `FreeRTOSConfig.h`文件是对FreeRTOS系统进行配置的一个头文件，需要自己创建，这里**在FreeRTOS文件夹下的include文件夹中创建，内容建议直接复制以下：**
 
