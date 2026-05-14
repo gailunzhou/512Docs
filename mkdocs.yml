@@ -100,6 +100,8 @@ nav:
   - 软件: 
     - Introduction: software/index.md
     - Web: basic/2025-11-8-firstDeploy.md
+    - FreeRTOS: 
+      - FreeRTOS移植&简单使用: software/FreeRTOS/2026-5-11-FreeRTOS笔记.md
     - ROS:
       - ROS1: software/ROS/2025-11-30-ROS1.md
       - Ubuntu系统镜像烧录: software/ROS/2025-11-30-ROS1-Ubuntu系统镜像烧录.md
