@@ -1,3 +1,10 @@
+---lab
+date: 2026-5-13
+author: CCChiJi
+category: 软件
+tags: FreeRTOS
+---
+
 # FreeRTOS
 
 官网：https://freertos.org/
