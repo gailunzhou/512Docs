@@ -9,7 +9,7 @@
         <link rel="prev" href="../../../basic/2025-11-8-firstDeploy/">
       
       
-        <link rel="next" href="../../ROS/2025-11-30-ROS1/">
+        <link rel="next" href="../2026-5-14-FreeRTOS%E7%AC%94%E8%AE%B02/">
       
       
         
@@ -1194,10 +1194,77 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附件
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-5-14-FreeRTOS%E7%AC%94%E8%AE%B02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FreeRTOS任务的挂起&amp;恢复
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2026-5-14-FreeRTOS%E7%AC%94%E8%AE%B03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FreeRTOS任务间的通信
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2709,6 +2776,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附件
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3716,6 +3794,40 @@
 <a id="__codelineno-11-71" name="__codelineno-11-71" href="#__codelineno-11-71"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">KeyNum</span><span class="p">;</span>
 <a id="__codelineno-11-72" name="__codelineno-11-72" href="#__codelineno-11-72"></a><span class="p">}</span>
 </code></pre></div>
+<h2 id="_1">附件</h2>
+<p>代码中使用到的串口打印函数<code>Usart1_printf()</code>具体实现如下，使用了C语言的可变参数，要<strong>使用可变参数必须包含头文件<code>include "stdarg.h"</code></strong>，具体知识点可以查询AI了解，关键点仅在于参数列表的使用流程</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Usart1_SendByte</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">Byte</span><span class="p">)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">USART_SendData</span><span class="p">(</span><span class="n">USART1</span><span class="w"> </span><span class="p">,</span><span class="n">Byte</span><span class="p">);</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">USART_GetFlagStatus</span><span class="p">(</span><span class="n">USART1</span><span class="w"> </span><span class="p">,</span><span class="n">USART_FLAG_TXE</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">RESET</span><span class="p">);</span><span class="c1">//等待发送完毕</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">}</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Usart1_SendString</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">string</span><span class="p">)</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">{</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">string</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">'\0'</span><span class="w"> </span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">        </span><span class="n">Usart1_SendByte</span><span class="p">(</span><span class="n">string</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="p">}</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="c1">//重写fputc使用原生printf编译出来很大，还需要依赖FILE，而且无法在中断中使用</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Usart1_printf</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">format</span><span class="p">,...)</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="p">{</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">String</span><span class="p">[</span><span class="mi">256</span><span class="p">];</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">    </span><span class="c1">//创建参数列表</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">    </span><span class="kt">va_list</span><span class="w"> </span><span class="n">arg</span><span class="p">;</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">    </span><span class="c1">//绑定参数列表到传入的固定参数</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">    </span><span class="n">va_start</span><span class="p">(</span><span class="n">arg</span><span class="w"> </span><span class="p">,</span><span class="n">format</span><span class="p">);</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="w">    </span><span class="c1">//重新拼接字符串 - &gt;只有vsprintf才可以拼接可变参数，sprintf只能传入固定的参数</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">    </span><span class="n">vsprintf</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="p">,</span><span class="n">format</span><span class="w"> </span><span class="p">,</span><span class="n">arg</span><span class="p">);</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="w">    </span><span class="c1">//清理参数列表</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="w">    </span><span class="n">va_end</span><span class="p">(</span><span class="n">arg</span><span class="p">);</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="w">    </span><span class="c1">//串口发送</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="w">    </span><span class="n">Usart1_SendString</span><span class="p">(</span><span class="n">String</span><span class="p">);</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="p">}</span>
+</code></pre></div>
+<p>上面代码中提到“重写fputc”该方式是重写<code>fputc</code>函数以直接使用<code>printf</code>函数，实际中更多是使用自己定义的<code>printf</code>，如上方式</p>
 
 
 
@@ -3770,13 +3882,13 @@
         
         
           
-          <a href="../../ROS/2025-11-30-ROS1/" class="md-footer__link md-footer__link--next" aria-label="下一页: ROS1">
+          <a href="../2026-5-14-FreeRTOS%E7%AC%94%E8%AE%B02/" class="md-footer__link md-footer__link--next" aria-label="下一页: FreeRTOS任务的挂起&amp;恢复">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                ROS1
+                FreeRTOS任务的挂起&amp;恢复
               </div>
             </div>
             <div class="md-footer__button md-icon">
