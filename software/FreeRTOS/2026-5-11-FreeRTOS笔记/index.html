@@ -2749,7 +2749,7 @@
 </div>
 
 <h1 id="freertos">FreeRTOS</h1>
-<p>官网：https://freertos.org/</p>
+<p>官网：<a href="https://freertos.org/">FreeRTOS官网</a></p>
 <h2 id="1-freertos">1. FreeRTOS概述</h2>
 <p>FreeRTOS是一个迷你（mini）的<strong>实时操作系统</strong>内核。作为一个轻量级的操作系统，功能包括：任务管理、时间管理、信号量、消息队列、内存管理、记录功能、软件定时器、协程（线程）等，可基本满足较小系统的需要。</p>
 <p>实时操作系统（RTOS-Real Time Operating System）中<strong>实时（Real Time）指的是任务（Task）或者说实现一个功能的线程（Thread）必须在给定的时间(Deadline)内完成。-------抢占性的。  非实时(Linux windows)是时间片轮换。</strong></p>
@@ -2775,13 +2775,13 @@
 <ol>
 <li>官网下载</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\FreeRTOS.png" data-desc-position="bottom"><img alt="FreeRTOS" src="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\FreeRTOS.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images\FreeRTOS.png" data-desc-position="bottom"><img alt="FreeRTOS" src="images\FreeRTOS.png"></a></p>
 <p>当前选择的是202212.01版本</p>
 <ol>
 <li>GitHub下载</li>
 </ol>
 <p>Github地址：https://github.com/FreeRTOS/FreeRTOS/releases</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\Github下载.png" data-desc-position="bottom"><img alt="Github下载" src="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\Github下载.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images\Github下载.png" data-desc-position="bottom"><img alt="Github下载" src="images\Github下载.png"></a></p>
 <h3 id="32">3.2 源码结构</h3>
 <ol>
 <li>整体结构</li>
@@ -2942,7 +2942,7 @@
 <p>RVDS 文件夹包含了各种处理器相关的文件夹，FreeRTOS 是一个软件，单片机是一个硬件，FreeRTOS 要想运行在一个单片机上面，它们就必须关联在一起。</p>
 <p>关联还是得通过写代码来关联，这部分关联的文件叫接口文件，通常由汇编和 C 联合编写。这些接口文件都是跟硬件密切相关的，不同的硬件接口文件是不一样的，但都大同小异。编写这些接口文件的过程我们就叫移植，移植的过程通常由 FreeRTOS 和 mcu 原厂的人来负责，移植好的这些接口文件就放在 RVDS 这个文件夹的目录下。</p>
 <p>FreeRTOS 为我们提供了 cortex-m0、m3、m4 和 m7 等内核的单片机的接口文件，根据mcu的内核选择对应的接口文件即可。其实准确来说，不能够叫移植，应该叫使用官方的移植， 因为这些跟硬件相关的接口文件，RTOS 官方都已经写好了，我们只是使用而已。</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\RVDS文件夹.png" data-desc-position="bottom"><img alt="RVDS文件夹" src="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\RVDS文件夹.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images\RVDS文件夹.png" data-desc-position="bottom"><img alt="RVDS文件夹" src="images\RVDS文件夹.png"></a></p>
 <p>以 ARM_CM3 这个文件夹为例，里面只有<code>port.c</code>与<code>portmacro.h</code> 两个文件</p>
 <p>其中<code>port.c</code>文件：</p>
 <p>里面的内容是由 FreeRTOS 官方的技术人员为 Cortex-M3 内核的处理器写的接口文件，里面核心的上下文切换代码是由汇编语言编写而成，对技术员的要求比较高，我们只是使用的话只需拷贝过来用即可。</p>
@@ -2952,21 +2952,21 @@
 <li>MemMang文件夹</li>
 </ol>
 <p>MemMang 文件夹下存放的是跟内存管理相关的，总共有五个 heap 文件以及一个 readme 说明文件。</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\内存管理.png" data-desc-position="bottom"><img alt="内存管理" src="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\内存管理.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images\内存管理.png" data-desc-position="bottom"><img alt="内存管理" src="images\内存管理.png"></a></p>
 <p>这五个 heap 文件在移植的时候必须使用一个，因为 FreeRTOS 在创建内核对象的时候使用的是动态分配内存，而这些动态内存分配的函数则在这几个文件里面实现，不同的分配算法会导致不同的效率与结果，后面在内存管理中我们会讲解每个文件的区别，由于现在是初学，所以我们选用 <strong>heap4.c</strong> 即可。</p>
 <h3 id="33">3.3 移植流程（需要自己有一个原始模板）</h3>
 <h4 id="331">3.3.1 目录添加源代码文件</h4>
 <p>在原始例程的根路径下，创建<strong>FreeRTOS</strong>文件夹，并且往里面新建<strong>portable</strong>和<strong>source</strong>文件夹</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\新建文件夹.png" data-desc-position="bottom"><img alt="新建文件夹" src="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\新建文件夹.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images\新建文件夹.png" data-desc-position="bottom"><img alt="新建文件夹" src="images\新建文件夹.png"></a></p>
 <p>拷贝FreeRTOS源码的Source文件夹的7个.c文件到例程的source文件夹。</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\拷贝源文件.png" data-desc-position="bottom"><img alt="拷贝源文件" src="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\拷贝源文件.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images\拷贝源文件.png" data-desc-position="bottom"><img alt="拷贝源文件" src="images\拷贝源文件.png"></a></p>
 <p>拷贝FreeRTOS源码portable文件夹下的Keil、RVDS、MemMang到例程的portable文件夹下。</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\拷贝文件夹.png" data-desc-position="bottom"><img alt="拷贝文件夹" src="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\拷贝文件夹.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images\拷贝文件夹.png" data-desc-position="bottom"><img alt="拷贝文件夹" src="images\拷贝文件夹.png"></a></p>
 <p><strong>其中例程的MemMang可只保留heap_4.c</strong></p>
 <p><strong>RVDS文件夹下要保留当前使用芯片所对应的内核（STM32F103就是CM3内核的）</strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\保留CM3文件夹.png" data-desc-position="bottom"><img alt="保留CM3文件夹" src="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\保留CM3文件夹.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images\保留CM3文件夹.png" data-desc-position="bottom"><img alt="保留CM3文件夹" src="images\保留CM3文件夹.png"></a></p>
 <p>拷贝FreeRTOS源码include文件夹到例程的FreeRTOS文件夹下。</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\拷贝头文件.png" data-desc-position="bottom"><img alt="拷贝头文件" src="G:\Test_Web\TestWeb\docs\software\FreeRTOS\images\拷贝头文件.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images\拷贝头文件.png" data-desc-position="bottom"><img alt="拷贝头文件" src="images\拷贝头文件.png"></a></p>
 <p><code>FreeRTOSConfig.h</code>文件是对FreeRTOS系统进行配置的一个头文件，需要自己创建，这里<strong>在FreeRTOS文件夹下的include文件夹中创建，内容建议直接复制以下：</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#ifndef FREERTOS_CONFIG_H</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#define FREERTOS_CONFIG_H</span>
