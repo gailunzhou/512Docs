@@ -1008,3 +1008,41 @@ uint8_t get_KeyNum(void)
 
 ```
 
+## 附件
+
+代码中使用到的串口打印函数`Usart1_printf()`具体实现如下，使用了C语言的可变参数，要**使用可变参数必须包含头文件`include "stdarg.h"`**，具体知识点可以查询AI了解，关键点仅在于参数列表的使用流程
+
+```c
+void Usart1_SendByte(uint16_t Byte)
+{
+	USART_SendData(USART1 ,Byte);
+	while(USART_GetFlagStatus(USART1 ,USART_FLAG_TXE) == RESET);//等待发送完毕
+}
+
+void Usart1_SendString(char *string)
+{
+	for(uint8_t i = 0; string[i] != '\0' ;i++)
+	{
+		Usart1_SendByte(string[i]);
+	}
+}
+
+//重写fputc使用原生printf编译出来很大，还需要依赖FILE，而且无法在中断中使用
+
+void Usart1_printf(char* format,...)
+{
+	char String[256];
+	//创建参数列表
+	va_list arg;
+	//绑定参数列表到传入的固定参数
+	va_start(arg ,format);
+	//重新拼接字符串 - >只有vsprintf才可以拼接可变参数，sprintf只能传入固定的参数
+	vsprintf(String ,format ,arg);
+	//清理参数列表
+	va_end(arg);
+	//串口发送
+	Usart1_SendString(String);
+}
+```
+
+上面代码中提到“重写fputc”该方式是重写`fputc`函数以直接使用`printf`函数，实际中更多是使用自己定义的`printf`，如上方式
