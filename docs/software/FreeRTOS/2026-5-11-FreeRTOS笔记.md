@@ -40,7 +40,7 @@ FreeRTOS是一个迷你（mini）的**实时操作系统**内核。作为一个�
 
 1. 官网下载
 
-![FreeRTOS](images\FreeRTOS.png)
+![FreeRTOS](images/FreeRTOS.png)
 
 当前选择的是202212.01版本
 
@@ -48,7 +48,7 @@ FreeRTOS是一个迷你（mini）的**实时操作系统**内核。作为一个�
 
    Github地址:[Github地址](https://github.com/FreeRTOS/FreeRTOS/releases)
 
-![Github下载](images\Github下载.png)
+![Github下载](images/GithubDownLoad.png)
 
 ### 3.2 源码结构
 
@@ -114,7 +114,7 @@ RVDS 文件夹包含了各种处理器相关的文件夹，FreeRTOS 是一个软
 
 FreeRTOS 为我们提供了 cortex-m0、m3、m4 和 m7 等内核的单片机的接口文件，根据mcu的内核选择对应的接口文件即可。其实准确来说，不能够叫移植，应该叫使用官方的移植， 因为这些跟硬件相关的接口文件，RTOS 官方都已经写好了，我们只是使用而已。
 
-![RVDS文件夹](images\RVDS文件夹.png)
+![RVDS文件夹](images/RVDSFile.png)
 
 以 ARM_CM3 这个文件夹为例，里面只有`port.c`与`portmacro.h` 两个文件
 
@@ -130,7 +130,7 @@ port.c文件对应的头文件，主要是一些数据类型和宏定义。
 
 MemMang 文件夹下存放的是跟内存管理相关的，总共有五个 heap 文件以及一个 readme 说明文件。
 
-![内存管理](images\内存管理.png)
+![内存管理](images/memMan.png)
 
 这五个 heap 文件在移植的时候必须使用一个，因为 FreeRTOS 在创建内核对象的时候使用的是动态分配内存，而这些动态内存分配的函数则在这几个文件里面实现，不同的分配算法会导致不同的效率与结果，后面在内存管理中我们会讲解每个文件的区别，由于现在是初学，所以我们选用 **heap4.c** 即可。
 
@@ -140,25 +140,25 @@ MemMang 文件夹下存放的是跟内存管理相关的，总共有五个 heap 
 
 在原始例程的根路径下，创建**FreeRTOS**文件夹，并且往里面新建**portable**和**source**文件夹
 
-![新建文件夹](images\新建文件夹.png)
+![新建文件夹](images/newFile.png)
 
 拷贝FreeRTOS源码的Source文件夹的7个.c文件到例程的source文件夹。
 
-![拷贝源文件](images\拷贝源文件.png)
+![拷贝源文件](images/copySource.png)
 
 拷贝FreeRTOS源码portable文件夹下的Keil、RVDS、MemMang到例程的portable文件夹下。
 
-![拷贝文件夹](images\拷贝文件夹.png)
+![拷贝文件夹](images/copyFile.png)
 
 **其中例程的MemMang可只保留heap_4.c**
 
 **RVDS文件夹下要保留当前使用芯片所对应的内核（STM32F103就是CM3内核的）**
 
-![保留CM3文件夹](images\保留CM3文件夹.png)
+![保留CM3文件夹](images/KeepCM3File.png)
 
 拷贝FreeRTOS源码include文件夹到例程的FreeRTOS文件夹下。
 
-![拷贝头文件](images\拷贝头文件.png)
+![拷贝头文件](images/copyHead.png)
 
 `FreeRTOSConfig.h`文件是对FreeRTOS系统进行配置的一个头文件，需要自己创建，这里**在FreeRTOS文件夹下的include文件夹中创建，内容建议直接复制以下：**
 
@@ -293,65 +293,65 @@ extern uint32_t FreeRTOSRunTimeTicks;
 
 工程配置中添加如下四个新文件夹，其中`APP`文件夹是实际的业务代码文件
 
-![工程配置1](images\工程配置1.png)
+![工程配置1](images/proConfig.png)
 
 `FreeRTOS/include`目录中添加所有`FreeRTOS`文件夹下的`include`文件夹所有内容
 
-![include配置](images\include配置.png)
+![include配置](images/includeConfig.png)
 
 `FreeRTOS/source`目录中添加如下内容，文件来自于`FreeRTOS`文件夹下的`source`文件夹
 
-![source配置](images\source配置.png)
+![source配置](images/sourceConfig.png)
 
 `FreeRTOS/portable`目录中添加如下内容，文件来自于`FreeRTOS`文件夹下的`portable`文件夹
 
-![portable配置](images\portable配置.png)
+![portable配置](images/portableConfig.png)
 
 `APP`目录中添加如下内容（主要就是自定义的业务逻辑文件）
 
-![APP配置](images\APP配置.png)
+![APP配置](images/APPConfig.png)
 
 以上内容添加好后，为了防止编译时找不到对应的头文件，还需要添加头文件所在的路径
 
 1. 
 
-![添加头文件配置](images\添加头文件配置.png)
+![添加头文件配置](images/AddHeadConfig.png)
 
 2. 
 
-![添加头文件配置2](images\添加头文件配置2.png)
+![添加头文件配置2](images/AddHeadConfig2.png)
 
 3. 
 
-![头文件配置](images\头文件配置.png)
+![头文件配置](images/headConfig.png)
 
 #### 3.3.3 编译报错修复
 
 编译一次会有报错，如果前面配置的正常现在应该会是这个错误：
 
-![编译报错1](images\编译报错1.png)
+![编译报错1](images/compileErr1.png)
 
 解决方法：
 
 找到这个stm32f10x_it.c里面三个空函数注释掉
 
-![注释函数1](images\注释函数1.png)
+![注释函数1](images/marginFunc1.png)
 
-![注释函数2](images\注释函数2.png)
+![注释函数2](images/marginFunc2.png)
 
-![注释函数3](images\注释函数3.png)
+![注释函数3](images/marginFunc3.png)
 
 如果出现这些错误：
 
 1. 
 
-![编译报错2](images\编译报错2.png)
+![编译报错2](images/compileErr2.png)
 
 说明没有创建`FreeRTOSConfig.h`文件且没有正确配置头文件路径
 
 2. 
 
-![编译报错3](images\编译报错3.png)
+![编译报错3](images/compileErr3.png)
 
 说明没有将`ARM_CM3`文件夹配置到头文件路径中
 
@@ -361,7 +361,7 @@ extern uint32_t FreeRTOSRunTimeTicks;
 
 把自己的串口相关代码修改一下文件名称即可，例如我这里原来是`Usart1.c`和`Usart1.h`
 
-![报错解决](images\报错解决.png)
+![报错解决](images/ErrorFix.png)
 
 #### 3.3.4 自定义嘀嗒时钟相关代码
 
