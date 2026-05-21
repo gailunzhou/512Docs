@@ -9,4 +9,6 @@ icon: material/navigation-variant
 
 如果您想要加入并推送自己的文章到该站，请阅读 “基础指南” -> “文档格式规范”和“多人协作”部分<br>(●'◡'●)
 
-![](basic/images/wonderful.jpg)
+[//]:#(![](basic/images/wonderful.jpg))
+
+![](basic/images/destoryking.jpg)
