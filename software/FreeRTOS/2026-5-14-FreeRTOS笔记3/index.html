@@ -1073,6 +1073,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用到的API
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2502,6 +2513,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用到的API
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2560,7 +2582,8 @@
 <li>接收方从消息队列中拿数据</li>
 </ol>
 <p>创建队列需要使用到队列的句柄，关于句柄，前面一节已经提到过，这里不再赘述</p>
-<p>使用到的API：具体API解读详见<a href="https://freertos.org/">FreeRTOS官网</a></p>
+<h3 id="api">使用到的API</h3>
+<p>具体API解读详见<a href="https://freertos.org/">FreeRTOS官网</a></p>
 <ul>
 <li>队列创建：<code>xQueueCreate(队列容量,队列中每个元素所占内存大小)</code></li>
 <li>发送数据到消息队列：<code>xQueueSend(要投放的消息队列句柄,要投放的数据地址,如果队列已满则等待的最大时间)</code></li>
