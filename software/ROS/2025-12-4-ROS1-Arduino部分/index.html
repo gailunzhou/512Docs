@@ -2985,7 +2985,8 @@
 <li>打开串口监视器，按照图中配置，输入"e"，如果正常则会返回左右轮的编码器计数，然后就可以转动轮子再输入指令"e"查看编码器计数情况</li>
 </ol>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/Arduino_encoder2.png" data-desc-position="bottom"><img alt="Arduino_encoder2" src="../images/Arduino_encoder2.png"></a></p>
-<p>编码器部分的程序是四倍频计数，因此若正转一圈则返回的值应该是4000左右，反转则为-4000左右，关于倍频计数的原理这里不进行过多解释<br>
+<p>编码器部分的程序是四倍频计数，因此若正转一圈则返回的值应该是4000左右，反转则为-4000左右，关于倍频计数的原理这里只简单说明公式：<br>
+<strong>一圈的脉冲数</strong> = <strong>一圈的编码器线数（这里假设为11，商家一般都会给参数说明）</strong> X <strong>倍频数（这里是4）</strong> X <strong>电机减速比（这里是90）</strong> 得出来约等于3960<br>
 简单理解为AB相编码器主要构成为A相与B相，每一相每转过单位的角度就发出一个脉冲信号(一圈可以发出N个脉冲信号)，<br>A相、B相为相互延迟1/4周期的脉冲输出，根据延迟关系可以区别正反转，而且通过取A相、B相的上升和下降沿可以进行单频或2倍频或4倍频测速</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/AB%E7%9B%B8.png" data-desc-position="bottom"><img alt="AB相" src="../images/AB%E7%9B%B8.png"></a></p>
 <h2 id="3">3. 添加自定义电机驱动</h2>
